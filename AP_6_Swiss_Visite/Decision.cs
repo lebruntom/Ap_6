@@ -13,7 +13,7 @@ namespace AP_6_Swiss_Visite
 
 
 
-        public void Decision(int id, string libelle)
+        public void decision(int id, string libelle)
         {
             this.id = id;
             this.libelle = libelle;
