@@ -34,6 +34,7 @@ namespace AP_6_Swiss_Visite
             this.médicamentsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.etapeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.etapeNorméeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.miseÀJourToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.décisionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.workflowToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
@@ -75,9 +76,18 @@ namespace AP_6_Swiss_Visite
             // 
             // etapeNorméeToolStripMenuItem
             // 
+            this.etapeNorméeToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.miseÀJourToolStripMenuItem});
             this.etapeNorméeToolStripMenuItem.Name = "etapeNorméeToolStripMenuItem";
             this.etapeNorméeToolStripMenuItem.Size = new System.Drawing.Size(116, 24);
             this.etapeNorméeToolStripMenuItem.Text = "Etape normée";
+            // 
+            // miseÀJourToolStripMenuItem
+            // 
+            this.miseÀJourToolStripMenuItem.Name = "miseÀJourToolStripMenuItem";
+            this.miseÀJourToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.miseÀJourToolStripMenuItem.Text = "Mise à jour";
+            this.miseÀJourToolStripMenuItem.Click += new System.EventHandler(this.miseÀJourToolStripMenuItem_Click);
             // 
             // décisionToolStripMenuItem
             // 
@@ -117,6 +127,7 @@ namespace AP_6_Swiss_Visite
         private System.Windows.Forms.ToolStripMenuItem etapeNorméeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem décisionToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem workflowToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem miseÀJourToolStripMenuItem;
     }
 }
 

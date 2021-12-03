@@ -1,0 +1,11 @@
+C:\Users\lebrunt\Documents\workspace\AP_6_Swiss_Visite\Ap_6\AP_6_Swiss_Visite\bin\Debug\AP_6_Swiss_Visite.exe.config
+C:\Users\lebrunt\Documents\workspace\AP_6_Swiss_Visite\Ap_6\AP_6_Swiss_Visite\bin\Debug\AP_6_Swiss_Visite.exe
+C:\Users\lebrunt\Documents\workspace\AP_6_Swiss_Visite\Ap_6\AP_6_Swiss_Visite\bin\Debug\AP_6_Swiss_Visite.pdb
+C:\Users\lebrunt\Documents\workspace\AP_6_Swiss_Visite\Ap_6\AP_6_Swiss_Visite\obj\Debug\AP_6_Swiss_Visite.csproj.AssemblyReference.cache
+C:\Users\lebrunt\Documents\workspace\AP_6_Swiss_Visite\Ap_6\AP_6_Swiss_Visite\obj\Debug\AP_6_Swiss_Visite.Form1.resources
+C:\Users\lebrunt\Documents\workspace\AP_6_Swiss_Visite\Ap_6\AP_6_Swiss_Visite\obj\Debug\AP_6_Swiss_Visite.frm_EtapeNorme_maj.resources
+C:\Users\lebrunt\Documents\workspace\AP_6_Swiss_Visite\Ap_6\AP_6_Swiss_Visite\obj\Debug\AP_6_Swiss_Visite.Properties.Resources.resources
+C:\Users\lebrunt\Documents\workspace\AP_6_Swiss_Visite\Ap_6\AP_6_Swiss_Visite\obj\Debug\AP_6_Swiss_Visite.csproj.GenerateResource.cache
+C:\Users\lebrunt\Documents\workspace\AP_6_Swiss_Visite\Ap_6\AP_6_Swiss_Visite\obj\Debug\AP_6_Swiss_Visite.csproj.CoreCompileInputs.cache
+C:\Users\lebrunt\Documents\workspace\AP_6_Swiss_Visite\Ap_6\AP_6_Swiss_Visite\obj\Debug\AP_6_Swiss_Visite.exe
+C:\Users\lebrunt\Documents\workspace\AP_6_Swiss_Visite\Ap_6\AP_6_Swiss_Visite\obj\Debug\AP_6_Swiss_Visite.pdb

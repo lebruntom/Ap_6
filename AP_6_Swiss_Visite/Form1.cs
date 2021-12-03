@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static AP_6_Swiss_Visite.BD;
 
 namespace AP_6_Swiss_Visite
 {
@@ -19,7 +20,14 @@ namespace AP_6_Swiss_Visite
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            int a = 1;
+            lireLesEtapesNormees();
+        }
+
+        private void miseÀJourToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            frm_EtapeNorme_maj etape_norme_maj = new frm_EtapeNorme_maj();
+            etape_norme_maj.Show();
         }
     }
 }

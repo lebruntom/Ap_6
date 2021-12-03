@@ -15,12 +15,13 @@ namespace AP_6_Swiss_Visite
         private string contreIndications;
         private string amm;
         private int derniereEtape;
-        private List<Famille> famille;
-        //famille
+        private Famille laFamille;
+        List<Workflow> lesEtapes;
+        
 
 
 
-        public Medicament(string depotLegal, string nomCommercial, string composition, string effets, string contreIndications, string amm, int derniereEtape, List<Famille> famille)
+        public Medicament(string depotLegal, string nomCommercial, string composition, string effets, string contreIndications, string amm, int derniereEtape, Famille laFamille)
         {
             this.depotLegal = depotLegal;
             this.nomCommercial = nomCommercial;
@@ -29,7 +30,7 @@ namespace AP_6_Swiss_Visite
             this.contreIndications = contreIndications;
             this.amm = amm;
             this.derniereEtape = derniereEtape;
-            this.famille = famille;
+            this.laFamille = laFamille;
         }
 
 
@@ -41,6 +42,6 @@ namespace AP_6_Swiss_Visite
         public string getContreIndications() { return this.contreIndications; }
         public string getAmm() { return this.amm; }
         public int getDerniereEtape() { return this.derniereEtape; }
-        public List<Famille> getFamille() { return this.famille; }
+        public Famille getFamille() { return this.laFamille; }
     }
 }
