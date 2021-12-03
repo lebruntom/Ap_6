@@ -12,5 +12,6 @@ namespace AP_6_Swiss_Visite
     {
         private static string Connexionstring = @"Data Source=BTS2020-20\SQLEXPRESS;Initial Catalog=DB_gesAMM;Integrated Security=True";
         public static SqlConnection Connexion = new SqlConnection(Connexionstring);
+
     }
 }
