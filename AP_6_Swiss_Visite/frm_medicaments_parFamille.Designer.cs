@@ -29,10 +29,12 @@ namespace AP_6_Swiss_Visite
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_medicaments_parFamille));
             this.lvMedFam = new System.Windows.Forms.ListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lvMedFam
@@ -44,7 +46,7 @@ namespace AP_6_Swiss_Visite
             this.lvMedFam.HideSelection = false;
             this.lvMedFam.Location = new System.Drawing.Point(40, 73);
             this.lvMedFam.Name = "lvMedFam";
-            this.lvMedFam.Size = new System.Drawing.Size(619, 340);
+            this.lvMedFam.Size = new System.Drawing.Size(624, 287);
             this.lvMedFam.TabIndex = 0;
             this.lvMedFam.UseCompatibleStateImageBehavior = false;
             this.lvMedFam.View = System.Windows.Forms.View.Details;
@@ -64,13 +66,27 @@ namespace AP_6_Swiss_Visite
             this.columnHeader3.Text = "Nombre de Médicaments";
             this.columnHeader3.Width = 180;
             // 
+            // button1
+            // 
+            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(40, 385);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(144, 44);
+            this.button1.TabIndex = 8;
+            this.button1.Text = "Retour";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // frm_medicaments_parFamille
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.lvMedFam);
             this.Name = "frm_medicaments_parFamille";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frm_medicaments_parFamille";
             this.Load += new System.EventHandler(this.frm_medicaments_parFamille_Load);
             this.ResumeLayout(false);
@@ -83,5 +99,6 @@ namespace AP_6_Swiss_Visite
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.ColumnHeader columnHeader3;
+        private System.Windows.Forms.Button button1;
     }
 }

@@ -53,5 +53,33 @@ namespace AP_6_Swiss_Visite
             Connexion.Close();
            
         }
+
+        public static Boolean ModifierEtapeNorme(int etp_num, string etp_norme, DateTime etp_date)
+        {
+            SqlCommand maRequete = new SqlCommand("prc_update_etape_normee", Globale.cnx);
+            // Il s’agit d’une procédure stockée:
+            maRequete.CommandType = System.Data.CommandType.StoredProcedure;
+
+            // Ajouter les parameters à la procédure stockée
+            SqlParameter paramEtpNum = new SqlParameter("@etp_num", System.Data.SqlDbType.Int, 5);
+            paramEtpNum.Value = etp_num;
+            SqlParameter paramEtpNorme = new SqlParameter("@etp_norme", System.Data.SqlDbType.Char, 30);
+            paramEtpNorme.Value = etp_norme;
+            SqlParameter paramEtpDate = new SqlParameter("@etp_date", System.Data.SqlDbType.Date, 30);
+            paramEtpDate.Value = etp_date;
+            maRequete.Parameters.Add(paramEtpNum);
+            maRequete.Parameters.Add(paramEtpNorme);
+            maRequete.Parameters.Add(paramEtpDate);
+            // exécuter la procedure stockée
+            try
+            {
+                maRequete.ExecuteNonQuery();
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
     }
 }

@@ -29,15 +29,17 @@ namespace AP_6_Swiss_Visite
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_EtapeNorme_maj));
             this.lvEtapeNormee = new System.Windows.Forms.ListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.btModifEtapeNorme = new System.Windows.Forms.Button();
             this.tbEtapeNorme = new System.Windows.Forms.TextBox();
-            this.tbDateNorme = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.dTPDateNorme = new System.Windows.Forms.DateTimePicker();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lvEtapeNormee
@@ -88,13 +90,6 @@ namespace AP_6_Swiss_Visite
             this.tbEtapeNorme.TabIndex = 2;
             this.tbEtapeNorme.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
-            // tbDateNorme
-            // 
-            this.tbDateNorme.Location = new System.Drawing.Point(569, 115);
-            this.tbDateNorme.Name = "tbDateNorme";
-            this.tbDateNorme.Size = new System.Drawing.Size(173, 22);
-            this.tbDateNorme.TabIndex = 3;
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -113,18 +108,39 @@ namespace AP_6_Swiss_Visite
             this.label2.TabIndex = 5;
             this.label2.Text = "ETP_DATE_NORME :";
             // 
+            // dTPDateNorme
+            // 
+            this.dTPDateNorme.Location = new System.Drawing.Point(569, 113);
+            this.dTPDateNorme.Name = "dTPDateNorme";
+            this.dTPDateNorme.Size = new System.Drawing.Size(203, 22);
+            this.dTPDateNorme.TabIndex = 6;
+            // 
+            // button1
+            // 
+            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(35, 379);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(144, 44);
+            this.button1.TabIndex = 7;
+            this.button1.Text = "Retour";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // frm_EtapeNorme_maj
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.dTPDateNorme);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.tbDateNorme);
             this.Controls.Add(this.tbEtapeNorme);
             this.Controls.Add(this.btModifEtapeNorme);
             this.Controls.Add(this.lvEtapeNormee);
             this.Name = "frm_EtapeNorme_maj";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frm_EtapeNorme_maj";
             this.Load += new System.EventHandler(this.frm_EtapeNorme_maj_Load);
             this.ResumeLayout(false);
@@ -140,8 +156,9 @@ namespace AP_6_Swiss_Visite
         private System.Windows.Forms.ColumnHeader columnHeader3;
         private System.Windows.Forms.Button btModifEtapeNorme;
         private System.Windows.Forms.TextBox tbEtapeNorme;
-        private System.Windows.Forms.TextBox tbDateNorme;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.DateTimePicker dTPDateNorme;
+        private System.Windows.Forms.Button button1;
     }
 }

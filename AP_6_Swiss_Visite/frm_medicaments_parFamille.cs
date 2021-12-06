@@ -33,5 +33,12 @@ namespace AP_6_Swiss_Visite
             }
             
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Form1 etape_norme_maj = new Form1();
+            etape_norme_maj.Show();
+        }
     }
 }

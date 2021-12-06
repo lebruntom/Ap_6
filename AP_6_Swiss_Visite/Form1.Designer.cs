@@ -32,12 +32,12 @@ namespace AP_6_Swiss_Visite
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.familleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.médicamentsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.parFamilleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.etapeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.etapeNorméeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.miseÀJourToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.décisionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.workflowToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.parFamilleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -53,14 +53,14 @@ namespace AP_6_Swiss_Visite
             this.workflowToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(800, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(800, 30);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // familleToolStripMenuItem
             // 
             this.familleToolStripMenuItem.Name = "familleToolStripMenuItem";
-            this.familleToolStripMenuItem.Size = new System.Drawing.Size(70, 24);
+            this.familleToolStripMenuItem.Size = new System.Drawing.Size(70, 26);
             this.familleToolStripMenuItem.Text = "Famille";
             // 
             // médicamentsToolStripMenuItem
@@ -68,13 +68,20 @@ namespace AP_6_Swiss_Visite
             this.médicamentsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.parFamilleToolStripMenuItem});
             this.médicamentsToolStripMenuItem.Name = "médicamentsToolStripMenuItem";
-            this.médicamentsToolStripMenuItem.Size = new System.Drawing.Size(112, 24);
+            this.médicamentsToolStripMenuItem.Size = new System.Drawing.Size(112, 26);
             this.médicamentsToolStripMenuItem.Text = "Médicaments";
+            // 
+            // parFamilleToolStripMenuItem
+            // 
+            this.parFamilleToolStripMenuItem.Name = "parFamilleToolStripMenuItem";
+            this.parFamilleToolStripMenuItem.Size = new System.Drawing.Size(162, 26);
+            this.parFamilleToolStripMenuItem.Text = "Par famille";
+            this.parFamilleToolStripMenuItem.Click += new System.EventHandler(this.parFamilleToolStripMenuItem_Click);
             // 
             // etapeToolStripMenuItem
             // 
             this.etapeToolStripMenuItem.Name = "etapeToolStripMenuItem";
-            this.etapeToolStripMenuItem.Size = new System.Drawing.Size(61, 24);
+            this.etapeToolStripMenuItem.Size = new System.Drawing.Size(61, 26);
             this.etapeToolStripMenuItem.Text = "Etape";
             // 
             // etapeNorméeToolStripMenuItem
@@ -82,7 +89,7 @@ namespace AP_6_Swiss_Visite
             this.etapeNorméeToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.miseÀJourToolStripMenuItem});
             this.etapeNorméeToolStripMenuItem.Name = "etapeNorméeToolStripMenuItem";
-            this.etapeNorméeToolStripMenuItem.Size = new System.Drawing.Size(116, 24);
+            this.etapeNorméeToolStripMenuItem.Size = new System.Drawing.Size(116, 26);
             this.etapeNorméeToolStripMenuItem.Text = "Etape normée";
             // 
             // miseÀJourToolStripMenuItem
@@ -95,21 +102,14 @@ namespace AP_6_Swiss_Visite
             // décisionToolStripMenuItem
             // 
             this.décisionToolStripMenuItem.Name = "décisionToolStripMenuItem";
-            this.décisionToolStripMenuItem.Size = new System.Drawing.Size(80, 24);
+            this.décisionToolStripMenuItem.Size = new System.Drawing.Size(80, 26);
             this.décisionToolStripMenuItem.Text = "Décision";
             // 
             // workflowToolStripMenuItem
             // 
             this.workflowToolStripMenuItem.Name = "workflowToolStripMenuItem";
-            this.workflowToolStripMenuItem.Size = new System.Drawing.Size(86, 24);
+            this.workflowToolStripMenuItem.Size = new System.Drawing.Size(86, 26);
             this.workflowToolStripMenuItem.Text = "Workflow";
-            // 
-            // parFamilleToolStripMenuItem
-            // 
-            this.parFamilleToolStripMenuItem.Name = "parFamilleToolStripMenuItem";
-            this.parFamilleToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.parFamilleToolStripMenuItem.Text = "Par famille";
-            this.parFamilleToolStripMenuItem.Click += new System.EventHandler(this.parFamilleToolStripMenuItem_Click);
             // 
             // Form1
             // 
@@ -119,6 +119,7 @@ namespace AP_6_Swiss_Visite
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.menuStrip1.ResumeLayout(false);
