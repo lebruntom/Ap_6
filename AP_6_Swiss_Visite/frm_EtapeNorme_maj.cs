@@ -36,12 +36,27 @@ namespace AP_6_Swiss_Visite
         {
             chargerListe();
             btModifEtapeNorme.Enabled = false;
-            dTPDateNorme.Format = DateTimePickerFormat.Short;
+           
         }
 
         private void lvEtapeNormee_SelectedIndexChanged(object sender, EventArgs e)
         {
             btModifEtapeNorme.Enabled = true;
+            if (lvEtapeNormee.SelectedIndices.Count <= 0)
+            {
+                return;
+            }
+            int idx = lvEtapeNormee.SelectedIndices[0];
+
+            if (idx >= 0)
+            {
+                string norm = lvEtapeNormee.Items[idx].SubItems[1].Text;
+                string date = lvEtapeNormee.Items[idx].SubItems[2].Text;
+
+                tbEtapeNorme.Text = norm;
+                tbDateNorme.Text = date;
+                
+            }
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -51,12 +66,12 @@ namespace AP_6_Swiss_Visite
 
         private void btModifEtapeNorme_Click(object sender, EventArgs e)
         {
-            if (tbEtapeNorme.Text != "" && dTPDateNorme.Text != "")
+            if (tbEtapeNorme.Text != "" && tbEtapeNorme.Text != "")
             {
                 try
                 {
-                    
-                    if (BD.ModifierEtapeNorme(3, tbEtapeNorme.Text, dTPDateNorme.Value))
+                  
+                    if (BD.ModifierEtapeNorme(3, tbEtapeNorme.Text, DateTime.Parse(tbDateNorme.Text)))
                     {
                         MessageBox.Show("L'étape normée a bien été mise à jour");
                         chargerListe();

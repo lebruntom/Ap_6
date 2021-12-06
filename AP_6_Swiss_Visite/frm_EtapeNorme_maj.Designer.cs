@@ -38,8 +38,8 @@ namespace AP_6_Swiss_Visite
             this.tbEtapeNorme = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.dTPDateNorme = new System.Windows.Forms.DateTimePicker();
             this.button1 = new System.Windows.Forms.Button();
+            this.tbDateNorme = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // lvEtapeNormee
@@ -108,13 +108,6 @@ namespace AP_6_Swiss_Visite
             this.label2.TabIndex = 5;
             this.label2.Text = "ETP_DATE_NORME :";
             // 
-            // dTPDateNorme
-            // 
-            this.dTPDateNorme.Location = new System.Drawing.Point(569, 113);
-            this.dTPDateNorme.Name = "dTPDateNorme";
-            this.dTPDateNorme.Size = new System.Drawing.Size(203, 22);
-            this.dTPDateNorme.TabIndex = 6;
-            // 
             // button1
             // 
             this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
@@ -127,13 +120,20 @@ namespace AP_6_Swiss_Visite
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // tbDateNorme
+            // 
+            this.tbDateNorme.Location = new System.Drawing.Point(570, 118);
+            this.tbDateNorme.Name = "tbDateNorme";
+            this.tbDateNorme.Size = new System.Drawing.Size(174, 22);
+            this.tbDateNorme.TabIndex = 8;
+            // 
             // frm_EtapeNorme_maj
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.tbDateNorme);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.dTPDateNorme);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.tbEtapeNorme);
@@ -158,7 +158,7 @@ namespace AP_6_Swiss_Visite
         private System.Windows.Forms.TextBox tbEtapeNorme;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.DateTimePicker dTPDateNorme;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox tbDateNorme;
     }
 }

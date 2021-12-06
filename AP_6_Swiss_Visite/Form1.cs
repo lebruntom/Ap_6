@@ -21,7 +21,8 @@ namespace AP_6_Swiss_Visite
         private void Form1_Load(object sender, EventArgs e)
         {
             lireLesEtapesNormees();
-            lireLesMedFam();
+            lireAllFamiles();
+            
         }
 
         private void miseÀJourToolStripMenuItem_Click(object sender, EventArgs e)

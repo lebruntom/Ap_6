@@ -32,7 +32,7 @@ namespace AP_6_Swiss_Visite
             Connexion.Close();
         }
 
-        public static void lireLesMedFam()
+        public static void lireAllFamiles()
         {
             Connexion.Open();
             SqlCommand commande = new SqlCommand("prc_select_med_fam", Connexion);
@@ -44,7 +44,7 @@ namespace AP_6_Swiss_Visite
             {
                 string numFamille = (string)resultat["FAM_CODE"];
                 string libelleFamille = resultat["FAM_LIBELLE"].ToString();
-                int NombreMedicament = (int)resultat["NombreMed"];
+                int NombreMedicament = 0;
 
                 Famille laFamille = new Famille(numFamille, libelleFamille, NombreMedicament);
 
@@ -53,19 +53,35 @@ namespace AP_6_Swiss_Visite
             Connexion.Close();
            
         }
+        public static void medparfam(string fam_code)
+        {
+            Connexion.Open();
+            SqlCommand maRequete = new SqlCommand("prc_medicament_famille", Connexion);
+            maRequete.CommandType = CommandType.StoredProcedure;
 
-        public static Boolean ModifierEtapeNorme(int etp_num, string etp_norme, DateTime etp_date)
+            // Ajouter les parameters à la procédure stockée
+            SqlParameter paramFamCode = new SqlParameter("@fam_code", SqlDbType.Int, 5);
+            paramFamCode.Value = fam_code;
+
+            maRequete.Parameters.Add(paramFamCode);
+
+            maRequete.ExecuteNonQuery();
+            Connexion.Close();
+
+        }
+
+        public static bool ModifierEtapeNorme(int etp_num, string etp_norme, DateTime etp_date)
         {
             SqlCommand maRequete = new SqlCommand("prc_update_etape_normee", Globale.cnx);
             // Il s’agit d’une procédure stockée:
-            maRequete.CommandType = System.Data.CommandType.StoredProcedure;
+            maRequete.CommandType = CommandType.StoredProcedure;
 
             // Ajouter les parameters à la procédure stockée
-            SqlParameter paramEtpNum = new SqlParameter("@etp_num", System.Data.SqlDbType.Int, 5);
+            SqlParameter paramEtpNum = new SqlParameter("@etp_num", SqlDbType.Int, 5);
             paramEtpNum.Value = etp_num;
-            SqlParameter paramEtpNorme = new SqlParameter("@etp_norme", System.Data.SqlDbType.Char, 30);
+            SqlParameter paramEtpNorme = new SqlParameter("@etp_norme", SqlDbType.Char, 30);
             paramEtpNorme.Value = etp_norme;
-            SqlParameter paramEtpDate = new SqlParameter("@etp_date", System.Data.SqlDbType.Date, 30);
+            SqlParameter paramEtpDate = new SqlParameter("@etp_date", SqlDbType.Date, 30);
             paramEtpDate.Value = etp_date;
             maRequete.Parameters.Add(paramEtpNum);
             maRequete.Parameters.Add(paramEtpNorme);
