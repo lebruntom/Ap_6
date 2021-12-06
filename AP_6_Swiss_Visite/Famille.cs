@@ -6,15 +6,15 @@ using System.Threading.Tasks;
 
 namespace AP_6_Swiss_Visite
 {
-    class Famille
+    public class Famille
     {
-        private char code;
+        private string code;
         private string libelle;
         private int nbMediAmm;
 
 
 
-        public Famille(char code, string libelle, int nbMediAmm)
+        public Famille(string code, string libelle, int nbMediAmm)
         {
             this.code = code;
             this.libelle = libelle;
@@ -23,7 +23,7 @@ namespace AP_6_Swiss_Visite
 
 
 
-        public char getCode() { return this.code; }
+        public string getCode() { return this.code; }
         public string getLibelle() { return this.libelle; }
         public int getNbMediAmm() { return this.nbMediAmm; }
     }

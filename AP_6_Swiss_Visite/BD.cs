@@ -31,5 +31,27 @@ namespace AP_6_Swiss_Visite
             }
             Connexion.Close();
         }
+
+        public static void lireLesMedFam()
+        {
+            Connexion.Open();
+            SqlCommand commande = new SqlCommand("prc_select_med_fam", Connexion);
+            commande.CommandType = CommandType.StoredProcedure;
+            SqlDataReader resultat = commande.ExecuteReader();
+
+            
+            while (resultat.Read())
+            {
+                string numFamille = (string)resultat["FAM_CODE"];
+                string libelleFamille = resultat["FAM_LIBELLE"].ToString();
+                int NombreMedicament = (int)resultat["NombreMed"];
+
+                Famille laFamille = new Famille(numFamille, libelleFamille, NombreMedicament);
+
+                Globale.lesFamilles.Add(laFamille);
+            }
+            Connexion.Close();
+           
+        }
     }
 }

@@ -29,9 +29,20 @@ namespace AP_6_Swiss_Visite
 
                 lvEtapeNormee.Items.Add(ligne);
             }
+            btModifEtapeNorme.Enabled = false;
         }
 
         private void lvEtapeNormee_SelectedIndexChanged(object sender, EventArgs e)
+        {
+          
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btModifEtapeNorme_Click(object sender, EventArgs e)
         {
 
         }

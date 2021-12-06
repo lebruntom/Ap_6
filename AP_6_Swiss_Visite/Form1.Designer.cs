@@ -37,6 +37,7 @@ namespace AP_6_Swiss_Visite
             this.miseÀJourToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.décisionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.workflowToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.parFamilleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -64,6 +65,8 @@ namespace AP_6_Swiss_Visite
             // 
             // médicamentsToolStripMenuItem
             // 
+            this.médicamentsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.parFamilleToolStripMenuItem});
             this.médicamentsToolStripMenuItem.Name = "médicamentsToolStripMenuItem";
             this.médicamentsToolStripMenuItem.Size = new System.Drawing.Size(112, 24);
             this.médicamentsToolStripMenuItem.Text = "Médicaments";
@@ -85,7 +88,7 @@ namespace AP_6_Swiss_Visite
             // miseÀJourToolStripMenuItem
             // 
             this.miseÀJourToolStripMenuItem.Name = "miseÀJourToolStripMenuItem";
-            this.miseÀJourToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.miseÀJourToolStripMenuItem.Size = new System.Drawing.Size(165, 26);
             this.miseÀJourToolStripMenuItem.Text = "Mise à jour";
             this.miseÀJourToolStripMenuItem.Click += new System.EventHandler(this.miseÀJourToolStripMenuItem_Click);
             // 
@@ -100,6 +103,13 @@ namespace AP_6_Swiss_Visite
             this.workflowToolStripMenuItem.Name = "workflowToolStripMenuItem";
             this.workflowToolStripMenuItem.Size = new System.Drawing.Size(86, 24);
             this.workflowToolStripMenuItem.Text = "Workflow";
+            // 
+            // parFamilleToolStripMenuItem
+            // 
+            this.parFamilleToolStripMenuItem.Name = "parFamilleToolStripMenuItem";
+            this.parFamilleToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.parFamilleToolStripMenuItem.Text = "Par famille";
+            this.parFamilleToolStripMenuItem.Click += new System.EventHandler(this.parFamilleToolStripMenuItem_Click);
             // 
             // Form1
             // 
@@ -128,6 +138,7 @@ namespace AP_6_Swiss_Visite
         private System.Windows.Forms.ToolStripMenuItem décisionToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem workflowToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem miseÀJourToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem parFamilleToolStripMenuItem;
     }
 }
 

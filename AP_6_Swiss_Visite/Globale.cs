@@ -13,6 +13,7 @@ namespace AP_6_Swiss_Visite
         Dictionary<string, Medicament> medicament = new Dictionary<string, Medicament>();
         public static List<Etape> lesEtapes = new List<Etape>();
         public static List<EtapeNormee> lesEtapesNormee = new List<EtapeNormee>();
+        public static List<Famille> lesFamilles = new List<Famille>();
         public static SqlConnection cnx;
     }
 }

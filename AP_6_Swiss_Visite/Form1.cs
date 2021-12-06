@@ -21,12 +21,20 @@ namespace AP_6_Swiss_Visite
         private void Form1_Load(object sender, EventArgs e)
         {
             lireLesEtapesNormees();
+            lireLesMedFam();
         }
 
         private void miseÀJourToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Hide();
             frm_EtapeNorme_maj etape_norme_maj = new frm_EtapeNorme_maj();
+            etape_norme_maj.Show();
+        }
+
+        private void parFamilleToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            frm_medicaments_parFamille etape_norme_maj = new frm_medicaments_parFamille();
             etape_norme_maj.Show();
         }
     }
