@@ -40,6 +40,18 @@ namespace AP_6_Swiss_Visite
             this.label2 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.tbDateNorme = new System.Windows.Forms.TextBox();
+            this.lvhistorique = new System.Windows.Forms.ListView();
+            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader9 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader10 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // lvEtapeNormee
@@ -48,10 +60,12 @@ namespace AP_6_Swiss_Visite
             this.columnHeader1,
             this.columnHeader2,
             this.columnHeader3});
+            this.lvEtapeNormee.FullRowSelect = true;
             this.lvEtapeNormee.HideSelection = false;
-            this.lvEtapeNormee.Location = new System.Drawing.Point(24, 21);
+            this.lvEtapeNormee.Location = new System.Drawing.Point(24, 70);
+            this.lvEtapeNormee.MultiSelect = false;
             this.lvEtapeNormee.Name = "lvEtapeNormee";
-            this.lvEtapeNormee.Size = new System.Drawing.Size(387, 317);
+            this.lvEtapeNormee.Size = new System.Drawing.Size(373, 160);
             this.lvEtapeNormee.TabIndex = 0;
             this.lvEtapeNormee.UseCompatibleStateImageBehavior = false;
             this.lvEtapeNormee.View = System.Windows.Forms.View.Details;
@@ -74,9 +88,9 @@ namespace AP_6_Swiss_Visite
             // 
             // btModifEtapeNorme
             // 
-            this.btModifEtapeNorme.Location = new System.Drawing.Point(502, 203);
+            this.btModifEtapeNorme.Location = new System.Drawing.Point(193, 158);
             this.btModifEtapeNorme.Name = "btModifEtapeNorme";
-            this.btModifEtapeNorme.Size = new System.Drawing.Size(157, 56);
+            this.btModifEtapeNorme.Size = new System.Drawing.Size(137, 40);
             this.btModifEtapeNorme.TabIndex = 1;
             this.btModifEtapeNorme.Text = "Modifier";
             this.btModifEtapeNorme.UseVisualStyleBackColor = true;
@@ -84,7 +98,7 @@ namespace AP_6_Swiss_Visite
             // 
             // tbEtapeNorme
             // 
-            this.tbEtapeNorme.Location = new System.Drawing.Point(569, 54);
+            this.tbEtapeNorme.Location = new System.Drawing.Point(174, 39);
             this.tbEtapeNorme.Name = "tbEtapeNorme";
             this.tbEtapeNorme.Size = new System.Drawing.Size(174, 22);
             this.tbEtapeNorme.TabIndex = 2;
@@ -93,7 +107,7 @@ namespace AP_6_Swiss_Visite
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(440, 52);
+            this.label1.Location = new System.Drawing.Point(45, 37);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(102, 17);
             this.label1.TabIndex = 4;
@@ -102,7 +116,7 @@ namespace AP_6_Swiss_Visite
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(417, 118);
+            this.label2.Location = new System.Drawing.Point(22, 103);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(147, 17);
             this.label2.TabIndex = 5;
@@ -112,7 +126,7 @@ namespace AP_6_Swiss_Visite
             // 
             this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(35, 379);
+            this.button1.Location = new System.Drawing.Point(35, 377);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(144, 44);
             this.button1.TabIndex = 7;
@@ -122,29 +136,103 @@ namespace AP_6_Swiss_Visite
             // 
             // tbDateNorme
             // 
-            this.tbDateNorme.Location = new System.Drawing.Point(570, 118);
+            this.tbDateNorme.Location = new System.Drawing.Point(175, 103);
             this.tbDateNorme.Name = "tbDateNorme";
             this.tbDateNorme.Size = new System.Drawing.Size(174, 22);
             this.tbDateNorme.TabIndex = 8;
+            // 
+            // lvhistorique
+            // 
+            this.lvhistorique.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader4,
+            this.columnHeader5,
+            this.columnHeader6,
+            this.columnHeader7,
+            this.columnHeader8,
+            this.columnHeader9,
+            this.columnHeader10});
+            this.lvhistorique.FullRowSelect = true;
+            this.lvhistorique.HideSelection = false;
+            this.lvhistorique.Location = new System.Drawing.Point(24, 260);
+            this.lvhistorique.Name = "lvhistorique";
+            this.lvhistorique.Size = new System.Drawing.Size(731, 98);
+            this.lvhistorique.TabIndex = 9;
+            this.lvhistorique.UseCompatibleStateImageBehavior = false;
+            this.lvhistorique.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeader4
+            // 
+            this.columnHeader4.Text = "HST_ID";
+            this.columnHeader4.Width = 92;
+            // 
+            // columnHeader5
+            // 
+            this.columnHeader5.Text = "HST_DATEMA";
+            this.columnHeader5.Width = 106;
+            // 
+            // columnHeader6
+            // 
+            this.columnHeader6.Text = "HST_ETP_NUM";
+            this.columnHeader6.Width = 151;
+            // 
+            // columnHeader7
+            // 
+            this.columnHeader7.Text = "HST_ETP_NORME_AVANT";
+            // 
+            // columnHeader8
+            // 
+            this.columnHeader8.Text = "HST_ETP_DATE_AVANT";
+            // 
+            // columnHeader9
+            // 
+            this.columnHeader9.Text = "HST_NORME_APRES";
+            // 
+            // columnHeader10
+            // 
+            this.columnHeader10.Text = "HST_ETP_DATE_APRES";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(156, 2);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(91, 62);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 11;
+            this.pictureBox1.TabStop = false;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.tbDateNorme);
+            this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Controls.Add(this.tbEtapeNorme);
+            this.groupBox1.Controls.Add(this.btModifEtapeNorme);
+            this.groupBox1.Location = new System.Drawing.Point(414, 10);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(364, 219);
+            this.groupBox1.TabIndex = 12;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Mofication des étapes normées";
             // 
             // frm_EtapeNorme_maj
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.tbDateNorme);
+            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.lvhistorique);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.tbEtapeNorme);
-            this.Controls.Add(this.btModifEtapeNorme);
             this.Controls.Add(this.lvEtapeNormee);
             this.Name = "frm_EtapeNorme_maj";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frm_EtapeNorme_maj";
             this.Load += new System.EventHandler(this.frm_EtapeNorme_maj_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -160,5 +248,15 @@ namespace AP_6_Swiss_Visite
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox tbDateNorme;
+        private System.Windows.Forms.ListView lvhistorique;
+        private System.Windows.Forms.ColumnHeader columnHeader4;
+        private System.Windows.Forms.ColumnHeader columnHeader5;
+        private System.Windows.Forms.ColumnHeader columnHeader6;
+        private System.Windows.Forms.ColumnHeader columnHeader7;
+        private System.Windows.Forms.ColumnHeader columnHeader8;
+        private System.Windows.Forms.ColumnHeader columnHeader9;
+        private System.Windows.Forms.ColumnHeader columnHeader10;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.GroupBox groupBox1;
     }
 }

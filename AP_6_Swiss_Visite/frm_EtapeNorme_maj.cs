@@ -7,7 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using System.Data.SqlClient;
+using System.Data;
 namespace AP_6_Swiss_Visite
 {
     public partial class frm_EtapeNorme_maj : Form
@@ -32,8 +33,48 @@ namespace AP_6_Swiss_Visite
                 lvEtapeNormee.Items.Add(ligne);
             }
         }
+
+        private void chargerHistorique()
+        {
+            lvhistorique.Items.Clear();
+
+            BD.Connexion.Open();
+            SqlCommand maRequete = new SqlCommand("prc_liste_historique", BD.Connexion);
+            maRequete.CommandType = CommandType.StoredProcedure;
+
+
+
+
+            SqlDataReader allData = maRequete.ExecuteReader();
+
+
+            while (allData.Read())
+            {
+                ListViewItem ligne = new ListViewItem();
+
+
+                ligne.Text = allData.GetValue(0).ToString();
+                ligne.SubItems.Add(allData.GetValue(1).ToString());
+                ligne.SubItems.Add(allData.GetValue(2).ToString());
+                ligne.SubItems.Add(allData.GetValue(3).ToString());
+                ligne.SubItems.Add(allData.GetValue(4).ToString());
+                ligne.SubItems.Add(allData.GetValue(5).ToString());
+                ligne.SubItems.Add(allData.GetValue(6).ToString());
+
+
+                lvhistorique.Items.Add(ligne);
+            }
+            BD.Connexion.Close();
+        }
         private void frm_EtapeNorme_maj_Load(object sender, EventArgs e)
         {
+
+            lvhistorique.Items.Clear();
+            chargerHistorique();
+
+
+            lvEtapeNormee.Items.Clear();
+
             chargerListe();
             btModifEtapeNorme.Enabled = false;
            
