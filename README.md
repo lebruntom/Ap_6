@@ -5,8 +5,6 @@
 
   <p align="center">
     <a href="https://github.com/lebruntom/Ap_6/issues">Signaler un Bug</a>
-    ·
-    <a href="https://github.com/lebruntom/Ap_6/issues">Demander une nouvelle fonctionnalitée</a>
   </p>
 </div>
 
@@ -108,7 +106,7 @@ Le projet est constitué de différentes pages :
 <!-- CONTACT -->
 ## Contact
 
-Tom Lebrun - [@lebruntom](https://www.linkedin.com/in/tom-lebrun) - tomlebrun27@gmail.com
+Tom Lebrun - [@TomLebrun](https://www.linkedin.com/in/tom-lebrun) - tomlebrun27@gmail.com
 
 Lien du projet : [https://github.com/lebruntom/Ap_6](https://github.com/lebruntom/Ap_6)
 
