@@ -36,6 +36,7 @@ namespace AP_6_Swiss_Visite
             this.etapeNorméeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.décisionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.workflowToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ajoutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -63,6 +64,8 @@ namespace AP_6_Swiss_Visite
             // 
             // médicamentsToolStripMenuItem
             // 
+            this.médicamentsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ajoutToolStripMenuItem});
             this.médicamentsToolStripMenuItem.Name = "médicamentsToolStripMenuItem";
             this.médicamentsToolStripMenuItem.Size = new System.Drawing.Size(112, 24);
             this.médicamentsToolStripMenuItem.Text = "Médicaments";
@@ -91,6 +94,13 @@ namespace AP_6_Swiss_Visite
             this.workflowToolStripMenuItem.Size = new System.Drawing.Size(86, 24);
             this.workflowToolStripMenuItem.Text = "Workflow";
             // 
+            // ajoutToolStripMenuItem
+            // 
+            this.ajoutToolStripMenuItem.Name = "ajoutToolStripMenuItem";
+            this.ajoutToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.ajoutToolStripMenuItem.Text = "Ajout";
+            this.ajoutToolStripMenuItem.Click += new System.EventHandler(this.ajoutToolStripMenuItem_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -117,6 +127,7 @@ namespace AP_6_Swiss_Visite
         private System.Windows.Forms.ToolStripMenuItem etapeNorméeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem décisionToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem workflowToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ajoutToolStripMenuItem;
     }
 }
 
