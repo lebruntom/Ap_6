@@ -46,14 +46,26 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AjoutMedicament.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AjoutMedicament.Designer.cs">
+      <DependentUpon>AjoutMedicament.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Famille.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="GestionSQL.cs" />
+    <Compile Include="Medicament.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AjoutMedicament.resx">
+      <DependentUpon>AjoutMedicament.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>

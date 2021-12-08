@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static AP_6_Swiss_Visite.GestionSQL;
+
 
 namespace AP_6_Swiss_Visite
 {
@@ -19,7 +21,15 @@ namespace AP_6_Swiss_Visite
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            int a = 1;
+            getFamilles();
+            getMedicaments();
+        }
+
+        private void ajoutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            AjoutMedicament ajoutMedicament = new AjoutMedicament();
+            ajoutMedicament.Show();
         }
     }
 }
