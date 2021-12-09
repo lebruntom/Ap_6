@@ -12,18 +12,18 @@ namespace AP_6_Swiss_Visite
 
         private string depotLegalMed;
         private string nomCommercialMed;
-        private string familleCode;
+        private Famille laFamille;
         private string compositionMed;
         private string effetMed;
         private string contreIndicationMed;
         private float prixEchantillonMed;
         private int derniereEtape;
 
-        public Medicament(string depotLegalMed, string nomCommercialMed, string familleCode, string compositionMed, string effetMed, string contreIndicationMed, float prixEchantillonMed, int derniereEtape)
+        public Medicament(string depotLegalMed, string nomCommercialMed, string laFamille, string compositionMed, string effetMed, string contreIndicationMed, float prixEchantillonMed, int derniereEtape)
         {
             this.depotLegalMed = depotLegalMed;
             this.nomCommercialMed = nomCommercialMed;
-            this.familleCode = familleCode;
+            this.laFamille = Famille.LesFamilles[laFamille];
             this.compositionMed = compositionMed;
             this.effetMed = effetMed;
             this.contreIndicationMed = contreIndicationMed;
@@ -31,5 +31,21 @@ namespace AP_6_Swiss_Visite
             this.derniereEtape = derniereEtape;
             lesMedicaments.Add(depotLegalMed, this);
         }
+
+        public string getDepotLegal() { return this.depotLegalMed; }
+
+        public string getNomCommercial() { return this.nomCommercialMed; }
+
+        public Famille getlaFamille() { return this.laFamille; }
+
+        public string getComposition() { return this.compositionMed; }
+
+        public string getEffet() { return this.effetMed; }
+
+        public string getContreIndication() { return this.contreIndicationMed; }
+
+        public float getPrixEchantillon() { return this.prixEchantillonMed; }
+
+        public int getDerniereEtape() { return this.derniereEtape; }
     }
 }
