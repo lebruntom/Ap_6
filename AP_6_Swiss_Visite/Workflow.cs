@@ -11,14 +11,14 @@ namespace AP_6_Swiss_Visite
         private DateTime dateDecision;
         private List<Etape> etape;
         private List<Decision> decision;
+        private List<Medicament> medicament;
 
-
-
-        public void workflow(DateTime dateDecision, List<Etape> etape, List<Decision> decision)
+        public void workflow(DateTime dateDecision, List<Etape> etape, List<Decision> decision, List<Medicament> medicament)
         {
             this.dateDecision = dateDecision;
             this.etape = etape;
             this.decision = decision;
+            this.medicament = medicament;
         }
     }
 }

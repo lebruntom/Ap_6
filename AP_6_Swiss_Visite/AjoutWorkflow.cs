@@ -10,23 +10,23 @@ using System.Windows.Forms;
 
 namespace AP_6_Swiss_Visite
 {
-    public partial class Form1 : Form
+    public partial class AjoutWorkflow : Form
     {
-        public Form1()
+        public AjoutWorkflow()
         {
             InitializeComponent();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
-            int a = 1;
-        }
-
-        private void ajouterToolStripMenuItem_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
             this.Hide();
-            AjoutWorkflow ajoutWorkflow = new AjoutWorkflow();
-            ajoutWorkflow.Show();
+            Form1 form1 = new Form1();
+            form1.Show();
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
         }
     }
 }

@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AjoutWorkflow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AjoutWorkflow.Designer.cs">
+      <DependentUpon>AjoutWorkflow.cs</DependentUpon>
+    </Compile>
     <Compile Include="BD.cs" />
     <Compile Include="Decision.cs" />
     <Compile Include="Etape.cs" />
@@ -62,6 +68,9 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Workflow.cs" />
+    <EmbeddedResource Include="AjoutWorkflow.resx">
+      <DependentUpon>AjoutWorkflow.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>

@@ -8,3 +8,4 @@ C:\Users\yazicis\Documents\workspace\Ap_6\AP_6_Swiss_Visite\obj\Debug\AP_6_Swiss
 C:\Users\yazicis\Documents\workspace\Ap_6\AP_6_Swiss_Visite\obj\Debug\AP_6_Swiss_Visite.csproj.CoreCompileInputs.cache
 C:\Users\yazicis\Documents\workspace\Ap_6\AP_6_Swiss_Visite\obj\Debug\AP_6_Swiss_Visite.exe
 C:\Users\yazicis\Documents\workspace\Ap_6\AP_6_Swiss_Visite\obj\Debug\AP_6_Swiss_Visite.pdb
+C:\Users\yazicis\Documents\workspace\Ap_6\AP_6_Swiss_Visite\obj\Debug\AP_6_Swiss_Visite.AjoutWorkflow.resources
