@@ -16,17 +16,5 @@ namespace AP_6_Swiss_Visite
         {
             InitializeComponent();
         }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            Form1 form1 = new Form1();
-            form1.Show();
-        }
-
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            
-        }
     }
 }

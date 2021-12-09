@@ -14,7 +14,6 @@ namespace AP_6_Swiss_Visite
         private static string Connexionstring = @"Data Source=BTS2020-13\SQLEXPRESS;Initial Catalog=test;Integrated Security=True";
         public static SqlConnection Connexion = new SqlConnection(Connexionstring);
 
-
         public static void getFamilles()
         {
             Famille.LesFamilles.Clear();
@@ -57,14 +56,10 @@ namespace AP_6_Swiss_Visite
                 string contreIndicationMed = resultat["MED_CONTREINDIC"].ToString();
 
 
-
-
                 object prix = resultat["MED_PRIXECHANTILLON"];
                 float prixEchantillonMed = 0.0f;
                 if (prix.GetType() != typeof(DBNull))
                     prixEchantillonMed = (float)resultat["MED_PRIXECHANTILLON"];
-
-
 
                 object derEtape = resultat["Derniere_etape"];
                 int derniereEtape = 0;
@@ -72,11 +67,11 @@ namespace AP_6_Swiss_Visite
                     derniereEtape = (int)resultat["Derniere_etape"];
 
 
-
                 new Medicament(depotLegalMed, nomCommercialMed, familleCode, compositionMed, effetsMed, contreIndicationMed, prixEchantillonMed, derniereEtape);
             }
             Connexion.Close();
         }
+
 
         public static Boolean ajouterMedicament(string depotLegal, string nomCommercialMed, string familleCode, string compositionMed, string effetMed, string contreIndicationMed, float prixUnitaire)
         {

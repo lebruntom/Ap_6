@@ -1,16 +1,3 @@
-<<<<<<< HEAD
-C:\Users\yazicis\Documents\workspace\Ap_6\AP_6_Swiss_Visite\bin\Debug\AP_6_Swiss_Visite.exe.config
-C:\Users\yazicis\Documents\workspace\Ap_6\AP_6_Swiss_Visite\bin\Debug\AP_6_Swiss_Visite.exe
-C:\Users\yazicis\Documents\workspace\Ap_6\AP_6_Swiss_Visite\bin\Debug\AP_6_Swiss_Visite.pdb
-C:\Users\yazicis\Documents\workspace\Ap_6\AP_6_Swiss_Visite\obj\Debug\AP_6_Swiss_Visite.csproj.AssemblyReference.cache
-C:\Users\yazicis\Documents\workspace\Ap_6\AP_6_Swiss_Visite\obj\Debug\AP_6_Swiss_Visite.Form1.resources
-C:\Users\yazicis\Documents\workspace\Ap_6\AP_6_Swiss_Visite\obj\Debug\AP_6_Swiss_Visite.Properties.Resources.resources
-C:\Users\yazicis\Documents\workspace\Ap_6\AP_6_Swiss_Visite\obj\Debug\AP_6_Swiss_Visite.csproj.GenerateResource.cache
-C:\Users\yazicis\Documents\workspace\Ap_6\AP_6_Swiss_Visite\obj\Debug\AP_6_Swiss_Visite.csproj.CoreCompileInputs.cache
-C:\Users\yazicis\Documents\workspace\Ap_6\AP_6_Swiss_Visite\obj\Debug\AP_6_Swiss_Visite.exe
-C:\Users\yazicis\Documents\workspace\Ap_6\AP_6_Swiss_Visite\obj\Debug\AP_6_Swiss_Visite.pdb
-C:\Users\yazicis\Documents\workspace\Ap_6\AP_6_Swiss_Visite\obj\Debug\AP_6_Swiss_Visite.AjoutWorkflow.resources
-=======
 C:\Workspace\Ap_6\AP_6_Swiss_Visite\bin\Debug\AP_6_Swiss_Visite.exe.config
 C:\Workspace\Ap_6\AP_6_Swiss_Visite\bin\Debug\AP_6_Swiss_Visite.exe
 C:\Workspace\Ap_6\AP_6_Swiss_Visite\bin\Debug\AP_6_Swiss_Visite.pdb
@@ -33,4 +20,4 @@ C:\Users\ramanzir\Desktop\Ap_6\AP_6_Swiss_Visite\obj\Debug\AP_6_Swiss_Visite.csp
 C:\Users\ramanzir\Desktop\Ap_6\AP_6_Swiss_Visite\obj\Debug\AP_6_Swiss_Visite.csproj.CoreCompileInputs.cache
 C:\Users\ramanzir\Desktop\Ap_6\AP_6_Swiss_Visite\obj\Debug\AP_6_Swiss_Visite.exe
 C:\Users\ramanzir\Desktop\Ap_6\AP_6_Swiss_Visite\obj\Debug\AP_6_Swiss_Visite.pdb
->>>>>>> romain
+C:\Workspace\Ap_6\AP_6_Swiss_Visite\obj\Debug\AP_6_Swiss_Visite.MedicamentEnCoursDeValidation.resources
