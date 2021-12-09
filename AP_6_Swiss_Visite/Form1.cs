@@ -22,21 +22,18 @@ namespace AP_6_Swiss_Visite
         private void Form1_Load(object sender, EventArgs e)
         {
             getFamilles();
-            getMedicaments();
+            lireMedicament();
+            
         }
 
         private void ajoutToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            AjoutMedicament ajoutMedicament = new AjoutMedicament();
-            ajoutMedicament.Show();
+            
         }
 
         private void enCoursDeValidationToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            MedicamentEnCoursDeValidation medicamentEnCours = new MedicamentEnCoursDeValidation();
-            medicamentEnCours.Show();
+            
         }
 
         private void ajouterToolStripMenuItem_Click(object sender, EventArgs e)
