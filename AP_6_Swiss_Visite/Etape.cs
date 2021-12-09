@@ -8,21 +8,20 @@ namespace AP_6_Swiss_Visite
 {
     class Etape
     {
-        private int num;
-        private string libelle;
+        private int etapeNum;
+        private string etapeLibelle;
 
-
-
-
-        public Etape(int num, string libelle)
+        public Etape(int etapeNum, string etapeLibelle)
         {
-            this.num = num;
-            this.libelle = libelle;
+            this.etapeNum = etapeNum;
+            this.etapeLibelle = etapeLibelle;
         }
 
+        public int getEtapeNum() => etapeNum;
+        public string getEtapeLibelle() => etapeLibelle;
 
+        public void getEtapeNum(int etapeNum) { this.etapeNum = etapeNum; }
+        public void getEtapeLibelle(string etapeLibelle) { this.etapeLibelle = etapeLibelle; }
 
-        public int getNum() { return this.num; }
-        public string getLibelle() { return this.libelle; }
     }
 }

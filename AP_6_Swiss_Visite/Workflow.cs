@@ -8,17 +8,21 @@ namespace AP_6_Swiss_Visite
 {
     class Workflow
     {
+        private int etapeNum;
+        private int decisionID;
         private DateTime dateDecision;
-        private List<Etape> etape;
-        private List<Decision> decision;
-        private List<Medicament> medicament;
+        private List<Etape> lesEtapes = new List<Etape>();
 
-        public void workflow(DateTime dateDecision, List<Etape> etape, List<Decision> decision, List<Medicament> medicament)
+        public Workflow(int etapeNum, int decisionID, DateTime dateDecision)
         {
+            this.etapeNum = etapeNum;
+            this.decisionID = decisionID;
             this.dateDecision = dateDecision;
-            this.etape = etape;
-            this.decision = decision;
-            this.medicament = medicament;
         }
+        public int getEtapeNum() { return this.etapeNum; }
+        public int getDecisionID() { return this.decisionID; }
+        public DateTime getDateDecision() { return this.dateDecision; }
+
+        public List<Etape> getListeEtape() { return this.lesEtapes; }
     }
 }

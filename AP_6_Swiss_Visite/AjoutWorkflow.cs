@@ -19,7 +19,16 @@ namespace AP_6_Swiss_Visite
 
         private void listView1_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            lvWorkflow.Items.Clear();//vider la listview a chaque fois qu'on re selectionne un nouveau médicament
+            if (lvMedicament.SelectedIndices.Count <= 0)//si y a pas d'element selectionné donc inférieur à 0 il se passe rien
+            {
+                return;
+            }
+            int idx = lvMedicament.SelectedIndices[0];//sinon elle va afficher la liste des informations voulu
+            if (idx >= 0)
+            {
+                //liste des informations workflow
+            }
         }
 
         private void AjoutWorkflow_Load(object sender, EventArgs e)
@@ -43,6 +52,13 @@ namespace AP_6_Swiss_Visite
 
                 lvMedicament.Items.Add(laLigne);
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Form1 Menu = new Form1();
+            Menu.Show();
         }
     }
 }

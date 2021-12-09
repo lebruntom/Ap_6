@@ -39,7 +39,7 @@ namespace AP_6_Swiss_Visite
             this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.listView2 = new System.Windows.Forms.ListView();
+            this.lvWorkflow = new System.Windows.Forms.ListView();
             this.columnHeader9 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader10 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader11 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -56,6 +56,7 @@ namespace AP_6_Swiss_Visite
             this.button1.TabIndex = 0;
             this.button1.Text = "Retour";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // lvMedicament
             // 
@@ -117,22 +118,22 @@ namespace AP_6_Swiss_Visite
             this.columnHeader8.Text = "Dernière-Etape";
             this.columnHeader8.Width = 166;
             // 
-            // listView2
+            // lvWorkflow
             // 
-            this.listView2.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.lvWorkflow.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader9,
             this.columnHeader10,
             this.columnHeader11,
             this.columnHeader12,
             this.columnHeader13,
             this.columnHeader14});
-            this.listView2.HideSelection = false;
-            this.listView2.Location = new System.Drawing.Point(19, 386);
-            this.listView2.Name = "listView2";
-            this.listView2.Size = new System.Drawing.Size(1600, 369);
-            this.listView2.TabIndex = 2;
-            this.listView2.UseCompatibleStateImageBehavior = false;
-            this.listView2.View = System.Windows.Forms.View.Details;
+            this.lvWorkflow.HideSelection = false;
+            this.lvWorkflow.Location = new System.Drawing.Point(19, 386);
+            this.lvWorkflow.Name = "lvWorkflow";
+            this.lvWorkflow.Size = new System.Drawing.Size(1600, 369);
+            this.lvWorkflow.TabIndex = 2;
+            this.lvWorkflow.UseCompatibleStateImageBehavior = false;
+            this.lvWorkflow.View = System.Windows.Forms.View.Details;
             // 
             // columnHeader9
             // 
@@ -168,7 +169,7 @@ namespace AP_6_Swiss_Visite
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1640, 850);
-            this.Controls.Add(this.listView2);
+            this.Controls.Add(this.lvWorkflow);
             this.Controls.Add(this.lvMedicament);
             this.Controls.Add(this.button1);
             this.Name = "AjoutWorkflow";
@@ -190,7 +191,7 @@ namespace AP_6_Swiss_Visite
         private System.Windows.Forms.ColumnHeader columnHeader6;
         private System.Windows.Forms.ColumnHeader columnHeader7;
         private System.Windows.Forms.ColumnHeader columnHeader8;
-        private System.Windows.Forms.ListView listView2;
+        private System.Windows.Forms.ListView lvWorkflow;
         private System.Windows.Forms.ColumnHeader columnHeader9;
         private System.Windows.Forms.ColumnHeader columnHeader10;
         private System.Windows.Forms.ColumnHeader columnHeader11;
