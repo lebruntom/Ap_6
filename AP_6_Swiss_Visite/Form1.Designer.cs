@@ -36,7 +36,11 @@ namespace AP_6_Swiss_Visite
             this.etapeNorméeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.décisionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.workflowToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+<<<<<<< HEAD
             this.ajouterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+=======
+            this.ajoutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+>>>>>>> romain
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -64,6 +68,11 @@ namespace AP_6_Swiss_Visite
             // 
             // médicamentsToolStripMenuItem
             // 
+<<<<<<< HEAD
+=======
+            this.médicamentsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ajoutToolStripMenuItem});
+>>>>>>> romain
             this.médicamentsToolStripMenuItem.Name = "médicamentsToolStripMenuItem";
             this.médicamentsToolStripMenuItem.Size = new System.Drawing.Size(112, 24);
             this.médicamentsToolStripMenuItem.Text = "Médicaments";
@@ -88,18 +97,30 @@ namespace AP_6_Swiss_Visite
             // 
             // workflowToolStripMenuItem
             // 
+<<<<<<< HEAD
             this.workflowToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.ajouterToolStripMenuItem});
+=======
+>>>>>>> romain
             this.workflowToolStripMenuItem.Name = "workflowToolStripMenuItem";
             this.workflowToolStripMenuItem.Size = new System.Drawing.Size(86, 24);
             this.workflowToolStripMenuItem.Text = "Workflow";
             // 
+<<<<<<< HEAD
             // ajouterToolStripMenuItem
             // 
             this.ajouterToolStripMenuItem.Name = "ajouterToolStripMenuItem";
             this.ajouterToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.ajouterToolStripMenuItem.Text = "Ajouter";
             this.ajouterToolStripMenuItem.Click += new System.EventHandler(this.ajouterToolStripMenuItem_Click);
+=======
+            // ajoutToolStripMenuItem
+            // 
+            this.ajoutToolStripMenuItem.Name = "ajoutToolStripMenuItem";
+            this.ajoutToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.ajoutToolStripMenuItem.Text = "Ajout";
+            this.ajoutToolStripMenuItem.Click += new System.EventHandler(this.ajoutToolStripMenuItem_Click);
+>>>>>>> romain
             // 
             // Form1
             // 
@@ -127,7 +148,11 @@ namespace AP_6_Swiss_Visite
         private System.Windows.Forms.ToolStripMenuItem etapeNorméeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem décisionToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem workflowToolStripMenuItem;
+<<<<<<< HEAD
         private System.Windows.Forms.ToolStripMenuItem ajouterToolStripMenuItem;
+=======
+        private System.Windows.Forms.ToolStripMenuItem ajoutToolStripMenuItem;
+>>>>>>> romain
     }
 }
 
