@@ -95,6 +95,8 @@ Une fois le projet lancé dans visual studio et la base de données importée, r
 Modifiez les informations de connexion à la base de données en changeant le nom du poste, en mettant le nom du votre à la place et en modifiant le nom de la base de données si votre nom de base de données et différent que celui indiqué.
 ```c#
 //connection à la base de données
+//BTS2020-20 = nom du poste
+//DB_gesAMM = nom de la base de données
 private static string Connexionstring = @"Data Source=BTS2020-20\SQLEXPRESS;Initial Catalog=DB_gesAMM;Integrated Security=True";
 public static SqlConnection Connexion = new SqlConnection(Connexionstring);
 ```
