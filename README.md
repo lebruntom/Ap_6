@@ -83,7 +83,7 @@ Vous aurez aussi besoin du script de la création de la base de données accéss
 
 Commencez par ouvrir le fichier du script de création de base et appuyez sur le bouton executer comme vous pouvez le voir sur la capture d'écran et la base de données sera créée.
 
-<center><img src="https://docs.microsoft.com/fr-fr/sql/ssms/quickstarts/media/ssms-connect-query-sql-server/execute.png?view=sql-server-ver15" style="width:450px; height:370px;"></center>
+<p align="center"><img src="https://docs.microsoft.com/fr-fr/sql/ssms/quickstarts/media/ssms-connect-query-sql-server/execute.png?view=sql-server-ver15" style="width:450px; height:370px;"></p>
 
 ### Configuration
 
