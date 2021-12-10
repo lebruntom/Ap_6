@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
-using System.Data;
+
 
 namespace AP_6_Swiss_Visite
 {
@@ -22,13 +22,17 @@ namespace AP_6_Swiss_Visite
 
         private void frm_medicaments_parFamille_Load(object sender, EventArgs e)
         {
+
+          
             //affichage dans la liste view des familles
-            foreach (Famille laFamille in Globale.lesFamilles)
+            foreach (string code in Globale.famille.Keys)
             {
                 ListViewItem ligne = new ListViewItem();
 
-                ligne.Text = laFamille.getCode().ToString();
-                ligne.SubItems.Add(laFamille.getLibelle());
+                Famille laFamille = Globale.famille[code];
+
+                ligne.Text = laFamille.getCodeFamille().ToString();
+                ligne.SubItems.Add(laFamille.getLibelleFamille());
 
                 int nbMedocs = 0;
 
@@ -40,7 +44,7 @@ namespace AP_6_Swiss_Visite
                 // Ajouter les parameters à la procédure stockée
                 SqlParameter paramFamCode = new SqlParameter("@fam_code", SqlDbType.VarChar, 5);
                 //valeur de la famille dans le foreach
-                paramFamCode.Value = laFamille.getCode().ToString();
+                paramFamCode.Value = laFamille.getCodeFamille().ToString();
 
                 maRequete.Parameters.Add(paramFamCode);
 

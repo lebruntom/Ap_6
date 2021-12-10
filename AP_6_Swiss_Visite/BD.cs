@@ -18,6 +18,9 @@ namespace AP_6_Swiss_Visite
         //Appel de la procedure pour afficher les étapes normées
         public static void lireLesEtapesNormees()
         {
+            Globale.lesEtapes.Clear();
+            Globale.lesEtapesNormee.Clear();
+
             Connexion.Open();
             SqlCommand commande = new SqlCommand("prc_listeEtapeNormee", Connexion);
             commande.CommandType = CommandType.StoredProcedure;
@@ -27,7 +30,7 @@ namespace AP_6_Swiss_Visite
             {
                 int numEtapeNormee = (int)resultat["ETP_NUM"];
                 string EtapeLibelle = resultat["ETP_LIBELLE"].ToString();
-                string EtapeNormeLibelle = resultat["ETP_NORME"].ToString();
+                string EtapeNormeLibelle = resultat["ETP_NORME"].ToString().Trim(' ');
                 DateTime EtapeDateNorme = (DateTime)resultat["ETP_DATE_NORME"];
 
                 new EtapeNormee(numEtapeNormee, EtapeLibelle, EtapeNormeLibelle, EtapeDateNorme);
@@ -38,29 +41,33 @@ namespace AP_6_Swiss_Visite
         //Appel procédure pour afficher toutes les familles
         public static void lireAllFamiles()
         {
-            Connexion.Open();
-            SqlCommand commande = new SqlCommand("prc_select_med_fam", Connexion);
-            commande.CommandType = CommandType.StoredProcedure;
-            SqlDataReader resultat = commande.ExecuteReader();
-
-            
-            while (resultat.Read())
+            if(Famille.LesFamilles.Count == 0)
             {
-                string numFamille = (string)resultat["FAM_CODE"];
-                string libelleFamille = resultat["FAM_LIBELLE"].ToString();
-                int NombreMedicament = 0;
+                Connexion.Open();
 
-                Famille laFamille = new Famille(numFamille, libelleFamille, NombreMedicament);
+                SqlCommand commande = new SqlCommand("prc_select_med_fam", Connexion);
+                commande.CommandType = CommandType.StoredProcedure;
+                SqlDataReader resultat = commande.ExecuteReader();
 
-                Globale.lesFamilles.Add(laFamille);
+
+                while (resultat.Read())
+                {
+                    string numFamille = (string)resultat["FAM_CODE"];
+                    string libelleFamille = resultat["FAM_LIBELLE"].ToString();
+
+                    Famille laFamille = new Famille(numFamille, libelleFamille);
+
+                    Globale.famille.Add(laFamille.getCodeFamille(), laFamille);
+                }
+                Connexion.Close();
             }
-            Connexion.Close();
-           
         }
 
         //Appel procedure pour afficher les médicaments par famille
         public static void medparfam(string fam_code)
         {
+            
+
             Connexion.Open();
             SqlCommand maRequete = new SqlCommand("prc_medicament_famille", Connexion);
             maRequete.CommandType = CommandType.StoredProcedure;
@@ -80,8 +87,9 @@ namespace AP_6_Swiss_Visite
         public static bool ModifierEtapeNorme(int etp_num, string etp_norme, DateTime etp_date)
         {
             Connexion.Open();
+         
 
-            SqlCommand maRequete = new SqlCommand("prc_update_etape_normee", Globale.cnx);
+            SqlCommand maRequete = new SqlCommand("prc_update_etape_normee", Connexion);
             // Il s’agit d’une procédure stockée:
             maRequete.CommandType = CommandType.StoredProcedure;
 
@@ -96,17 +104,73 @@ namespace AP_6_Swiss_Visite
             maRequete.Parameters.Add(paramEtpNorme);
             maRequete.Parameters.Add(paramEtpDate);
             // exécuter la procedure stockée
-            try
+
+            maRequete.ExecuteNonQuery();
+
+            SqlCommand commande = new SqlCommand("prc_listeEtapeNormee", Connexion);
+            commande.CommandType = CommandType.StoredProcedure;
+            SqlDataReader resultat = commande.ExecuteReader();
+            Globale.lesEtapes.Clear();
+            Globale.lesEtapesNormee.Clear();
+            while (resultat.Read())
             {
-                maRequete.ExecuteNonQuery();
-                return true;
-                Connexion.Close();
+                int numEtapeNormee = (int)resultat["ETP_NUM"];
+                string EtapeLibelle = resultat["ETP_LIBELLE"].ToString();
+                string EtapeNormeLibelle = resultat["ETP_NORME"].ToString();
+                DateTime EtapeDateNorme = (DateTime)resultat["ETP_DATE_NORME"];
+
+                new EtapeNormee(numEtapeNormee, EtapeLibelle, EtapeNormeLibelle, EtapeDateNorme);
             }
-            catch
+
+            Connexion.Close();
+
+            return true;
+        }
+        public static void getMedicaments()
+        {
+
+            Medicament.lesMedicaments.Clear();
+
+            Connexion.Open();
+
+            SqlCommand commande = new SqlCommand("prc_get_medicament", Connexion);
+            commande.CommandType = CommandType.StoredProcedure;
+            SqlDataReader resultat = commande.ExecuteReader();
+
+
+
+
+
+            while (resultat.Read())
             {
-                return false;
-                Connexion.Close();
+                string depotLegalMed = resultat["MED_DEPOTLEGAL"].ToString();
+                string nomCommercialMed = resultat["MED_NOMCOMMERCIAL"].ToString();
+                string familleCode = resultat["FAM_CODE"].ToString();
+                string compositionMed = resultat["MED_COMPOSITION"].ToString();
+                string effetsMed = resultat["MED_EFFETS"].ToString();
+                string contreIndicationMed = resultat["MED_CONTREINDIC"].ToString();
+
+
+
+
+                object prix = resultat["MED_PRIXECHANTILLON"];
+                float prixEchantillonMed = 0.0f;
+                if (prix.GetType() != typeof(DBNull))
+                    prixEchantillonMed = (float)resultat["MED_PRIXECHANTILLON"];
+
+
+
+                object derEtape = resultat["Derniere_etape"];
+                int derniereEtape = 0;
+                if (derEtape.GetType() != typeof(DBNull))
+                    derniereEtape = (int)resultat["Derniere_etape"];
+
+
+
+
+                new Medicament(depotLegalMed, nomCommercialMed, familleCode, compositionMed, effetsMed, contreIndicationMed, prixEchantillonMed, derniereEtape);
             }
+            Connexion.Close();
         }
     }
 }

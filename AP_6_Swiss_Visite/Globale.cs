@@ -9,11 +9,9 @@ namespace AP_6_Swiss_Visite
 {
     class Globale
     {
-        Dictionary<int, Famille> famille = new Dictionary<int, Famille>();
-        Dictionary<string, Medicament> medicament = new Dictionary<string, Medicament>();
+        public static Dictionary<string, Famille> famille = new Dictionary<string, Famille>();
         public static List<Etape> lesEtapes = new List<Etape>();
         public static List<EtapeNormee> lesEtapesNormee = new List<EtapeNormee>();
-        public static List<Famille> lesFamilles = new List<Famille>();
-        public static SqlConnection cnx;
+        
     }
 }

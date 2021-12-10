@@ -157,7 +157,7 @@ namespace AP_6_Swiss_Visite
             this.lvhistorique.HideSelection = false;
             this.lvhistorique.Location = new System.Drawing.Point(24, 280);
             this.lvhistorique.Name = "lvhistorique";
-            this.lvhistorique.Size = new System.Drawing.Size(731, 98);
+            this.lvhistorique.Size = new System.Drawing.Size(754, 98);
             this.lvhistorique.TabIndex = 9;
             this.lvhistorique.UseCompatibleStateImageBehavior = false;
             this.lvhistorique.View = System.Windows.Forms.View.Details;

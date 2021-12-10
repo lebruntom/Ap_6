@@ -8,7 +8,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
-using System.Data;
 namespace AP_6_Swiss_Visite
 {
     public partial class frm_EtapeNorme_maj : Form
@@ -112,30 +111,37 @@ namespace AP_6_Swiss_Visite
 
         private void btModifEtapeNorme_Click(object sender, EventArgs e)
         {
-            if (tbEtapeNorme.Text != "" && tbEtapeNorme.Text != "")
+            
+
+            if (tbEtapeNorme.Text != string.Empty && tbEtapeNorme.Text != string.Empty)
             {
-                try
+
+                if (lvEtapeNormee.SelectedIndices.Count <= 0)
                 {
-                  
-                    if (BD.ModifierEtapeNorme(3, tbEtapeNorme.Text, DateTime.Parse(tbDateNorme.Text)))
+                return;
+                }
+                int idx = int.Parse(lvEtapeNormee.SelectedItems[0].Text);
+
+                if (BD.ModifierEtapeNorme(idx, tbEtapeNorme.Text, DateTime.Parse(tbDateNorme.Text)))
                     {
-                        MessageBox.Show("L'étape normée a bien été mise à jour");
+                        MessageBox.Show("L'étape normée a bien été mise à jour");               
+                        chargerHistorique();
                         chargerListe();
                     }
                     else
                     {
                         MessageBox.Show("Erreur dans la mise à jour de l'étape normée");
                     }
-                }
-                catch
-                {
-                    MessageBox.Show("Erreur, le n° de l'étape doit être un entier");
-                }
+                
+               
             }
             else
             {
                 MessageBox.Show("Erreur, il faut renseigner tous les champs");
             }
+           
+            
+            
         }
 
         private void button1_Click(object sender, EventArgs e)

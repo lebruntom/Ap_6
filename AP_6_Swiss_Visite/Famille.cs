@@ -6,25 +6,36 @@ using System.Threading.Tasks;
 
 namespace AP_6_Swiss_Visite
 {
-    public class Famille
+    internal class Famille
     {
-        private string code;
-        private string libelle;
-        private int nbMediAmm;
+        public static Dictionary<string, Famille> LesFamilles = new Dictionary<string, Famille>();
 
 
 
-        public Famille(string code, string libelle, int nbMediAmm)
+        private string codeFamille;
+        private string libelleFamille;
+
+
+
+        public Famille(string codeFamille, string libelleFamille)
         {
-            this.code = code;
-            this.libelle = libelle;
-            this.nbMediAmm = nbMediAmm;
+            this.codeFamille = codeFamille;
+            this.libelleFamille = libelleFamille;
+            LesFamilles.Add(codeFamille, this);
         }
 
 
 
-        public string getCode() { return this.code; }
-        public string getLibelle() { return this.libelle; }
-        public int getNbMediAmm() { return this.nbMediAmm; }
+        public string getCodeFamille()
+        {
+            return this.codeFamille;
+        }
+
+
+
+        public string getLibelleFamille()
+        {
+            return this.libelleFamille;
+        }
     }
 }

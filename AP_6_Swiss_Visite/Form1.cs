@@ -20,8 +20,10 @@ namespace AP_6_Swiss_Visite
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            lireLesEtapesNormees();
             lireAllFamiles();
+            getMedicaments();
+            lireLesEtapesNormees();
+            
             
         }
 
@@ -37,6 +39,13 @@ namespace AP_6_Swiss_Visite
             this.Hide();
             frm_medicaments_parFamille etape_norme_maj = new frm_medicaments_parFamille();
             etape_norme_maj.Show();
+        }
+
+        private void décisionToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            frm_Decision_Etape etape = new frm_Decision_Etape();
+            etape.Show();
         }
     }
 }
