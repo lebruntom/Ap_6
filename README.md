@@ -51,7 +51,7 @@ Le laboratoire GSB désire se pourvoir d'une application interne, accessible uni
 <p align="right">(<a href="#top">Retour en haut</a>)</p>
 
 
-### Technologie
+## Technologie
 
 Lors de la réalisation de ce projet, nous avons utilisés différentes technologies :
 
