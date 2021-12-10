@@ -42,7 +42,7 @@ Dans ce projet, notre équipe était composée de 3 personnes.
 
 <p align="right">(<a href="#top">Retour en haut</a>)</p>
 
-### Projet
+## Projet
 
 GSB désire mettre à disposition de l'équipe technique de l'entreprise une application dédiée au suivi des étapes de validation de mise sur le marché d'un médicament.
 
@@ -65,7 +65,7 @@ Lors de la réalisation de ce projet, nous avons utilisés différentes technolo
 
 Afin de pouvoir visualiser et utiliser notre projet, il est néccessaire de procéder à quelques actions :
 
-### Les Prérequis
+## Les Prérequis
 
 Dans un premier temps, nous aurons de visual studio pour programmer en c#
 
@@ -79,7 +79,7 @@ Ensuite, nous aurons besoin de SQL Server
 Vous aurez aussi besoin du script de la création de la base de données accéssible dans le projet en format .sql
 
 <p align="right">(<a href="#top">Retour en haut</a>)</p>
-### Importation
+## Importation
 
 1. Importez la base de données dans SQL server et executer la en vérifiant que toutes les tables se sont correctement créées.
 
@@ -88,7 +88,7 @@ Commencez par ouvrir le fichier du script de création de base et appuyez sur le
 <p align="center"><img src="https://docs.microsoft.com/fr-fr/sql/ssms/quickstarts/media/ssms-connect-query-sql-server/execute.png?view=sql-server-ver15" style="width:450px; height:370px;"></p>
 
 <p align="right">(<a href="#top">Retour en haut</a>)</p>
-### Configuration
+## Configuration
 
 Une fois le projet lancé dans visual studio et la base de données importée, rendez vous dans la class BD du projet.
 
