@@ -45,6 +45,8 @@ namespace AP_6_Swiss_Visite
             this.columnHeader10 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader11 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -54,9 +56,11 @@ namespace AP_6_Swiss_Visite
             this.columnHeader1,
             this.columnHeader2,
             this.columnHeader3});
+            this.lvMedFam.FullRowSelect = true;
             this.lvMedFam.HideSelection = false;
-            this.lvMedFam.Location = new System.Drawing.Point(12, 12);
+            this.lvMedFam.Location = new System.Drawing.Point(12, 24);
             this.lvMedFam.Name = "lvMedFam";
+            this.lvMedFam.RightToLeftLayout = true;
             this.lvMedFam.Size = new System.Drawing.Size(488, 178);
             this.lvMedFam.TabIndex = 0;
             this.lvMedFam.UseCompatibleStateImageBehavior = false;
@@ -82,7 +86,7 @@ namespace AP_6_Swiss_Visite
             // 
             this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(12, 394);
+            this.button1.Location = new System.Drawing.Point(12, 399);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(144, 44);
             this.button1.TabIndex = 8;
@@ -102,9 +106,9 @@ namespace AP_6_Swiss_Visite
             this.columnHeader10,
             this.columnHeader11});
             this.lvMedFammm.HideSelection = false;
-            this.lvMedFammm.Location = new System.Drawing.Point(12, 210);
+            this.lvMedFammm.Location = new System.Drawing.Point(12, 232);
             this.lvMedFammm.Name = "lvMedFammm";
-            this.lvMedFammm.Size = new System.Drawing.Size(776, 178);
+            this.lvMedFammm.Size = new System.Drawing.Size(776, 158);
             this.lvMedFammm.TabIndex = 9;
             this.lvMedFammm.UseCompatibleStateImageBehavior = false;
             this.lvMedFammm.View = System.Windows.Forms.View.Details;
@@ -154,11 +158,31 @@ namespace AP_6_Swiss_Visite
             this.pictureBox1.TabIndex = 10;
             this.pictureBox1.TabStop = false;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(9, 211);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(191, 17);
+            this.label1.TabIndex = 11;
+            this.label1.Text = "Médicaments pour la famille :";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(12, 4);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(169, 17);
+            this.label2.TabIndex = 12;
+            this.label2.Text = "Sélectionnez une famille :";
+            // 
             // frm_medicaments_parFamille
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.lvMedFammm);
             this.Controls.Add(this.button1);
@@ -169,6 +193,7 @@ namespace AP_6_Swiss_Visite
             this.Load += new System.EventHandler(this.frm_medicaments_parFamille_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -189,5 +214,7 @@ namespace AP_6_Swiss_Visite
         private System.Windows.Forms.ColumnHeader columnHeader10;
         private System.Windows.Forms.ColumnHeader columnHeader11;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
     }
 }

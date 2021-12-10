@@ -17,6 +17,8 @@ namespace AP_6_Swiss_Visite
         {
             InitializeComponent();
         }
+
+        //rempli la liste view des étapes normées
         private void chargerListe()
         {
             lvEtapeNormee.Items.Clear();
@@ -34,6 +36,7 @@ namespace AP_6_Swiss_Visite
             }
         }
 
+        // rempli la liste view des historique en appelant la procedure et en afficher les données des valeurs que la procédure retourne
         private void chargerHistorique()
         {
             lvhistorique.Items.Clear();
@@ -69,10 +72,12 @@ namespace AP_6_Swiss_Visite
         private void frm_EtapeNorme_maj_Load(object sender, EventArgs e)
         {
 
+            //afficher liste historique
             lvhistorique.Items.Clear();
             chargerHistorique();
 
 
+            //afficher liste étape normée
             lvEtapeNormee.Items.Clear();
 
             chargerListe();

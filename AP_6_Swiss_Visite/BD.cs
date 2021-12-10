@@ -10,9 +10,12 @@ namespace AP_6_Swiss_Visite
 {
     public static class BD
     {
+        //connection à la base de données
         private static string Connexionstring = @"Data Source=BTS2020-20\SQLEXPRESS;Initial Catalog=DB_gesAMM;Integrated Security=True";
         public static SqlConnection Connexion = new SqlConnection(Connexionstring);
 
+        
+        //Appel de la procedure pour afficher les étapes normées
         public static void lireLesEtapesNormees()
         {
             Connexion.Open();
@@ -32,6 +35,7 @@ namespace AP_6_Swiss_Visite
             Connexion.Close();
         }
 
+        //Appel procédure pour afficher toutes les familles
         public static void lireAllFamiles()
         {
             Connexion.Open();
@@ -53,6 +57,8 @@ namespace AP_6_Swiss_Visite
             Connexion.Close();
            
         }
+
+        //Appel procedure pour afficher les médicaments par famille
         public static void medparfam(string fam_code)
         {
             Connexion.Open();
@@ -70,8 +76,11 @@ namespace AP_6_Swiss_Visite
 
         }
 
+        //Appel procédure pour modifer une étape normée
         public static bool ModifierEtapeNorme(int etp_num, string etp_norme, DateTime etp_date)
         {
+            Connexion.Open();
+
             SqlCommand maRequete = new SqlCommand("prc_update_etape_normee", Globale.cnx);
             // Il s’agit d’une procédure stockée:
             maRequete.CommandType = CommandType.StoredProcedure;
@@ -91,10 +100,12 @@ namespace AP_6_Swiss_Visite
             {
                 maRequete.ExecuteNonQuery();
                 return true;
+                Connexion.Close();
             }
             catch
             {
                 return false;
+                Connexion.Close();
             }
         }
     }

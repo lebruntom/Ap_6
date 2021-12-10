@@ -22,7 +22,7 @@ namespace AP_6_Swiss_Visite
 
         private void frm_medicaments_parFamille_Load(object sender, EventArgs e)
         {
-
+            //affichage dans la liste view des familles
             foreach (Famille laFamille in Globale.lesFamilles)
             {
                 ListViewItem ligne = new ListViewItem();
@@ -32,23 +32,26 @@ namespace AP_6_Swiss_Visite
 
                 int nbMedocs = 0;
 
+                //récupérer procédure des médicaments par famille pour afficher le nombre de medicament par famille
                 BD.Connexion.Open();
                 SqlCommand maRequete = new SqlCommand("prc_medicament_famille", BD.Connexion);
                 maRequete.CommandType = CommandType.StoredProcedure;
 
                 // Ajouter les parameters à la procédure stockée
                 SqlParameter paramFamCode = new SqlParameter("@fam_code", SqlDbType.VarChar, 5);
+                //valeur de la famille dans le foreach
                 paramFamCode.Value = laFamille.getCode().ToString();
 
                 maRequete.Parameters.Add(paramFamCode);
 
                 SqlDataReader allData = maRequete.ExecuteReader();
 
+                //augmenter compteur
                 while (allData.Read())
                 {
                     nbMedocs++;
                 }
-
+                //afficher compteur
                 ligne.SubItems.Add(nbMedocs.ToString());
 
                 BD.Connexion.Close();
@@ -60,6 +63,7 @@ namespace AP_6_Swiss_Visite
 
         private void button1_Click(object sender, EventArgs e)
         {
+            //bouton retour
             this.Hide();
             Form1 etape_norme_maj = new Form1();
             etape_norme_maj.Show();
@@ -67,6 +71,7 @@ namespace AP_6_Swiss_Visite
 
         private void lvMedFam_SelectedIndexChanged(object sender, EventArgs e)
         {
+            //récupération de l'id famille 
             lvMedFammm.Items.Clear();
             if (lvMedFam.SelectedIndices.Count <= 0)
             {
@@ -79,19 +84,21 @@ namespace AP_6_Swiss_Visite
 
                 string codeFam = lvMedFam.SelectedItems[0].Text.ToString();
 
+                //récupération de la procédure medicament par famille avec l'id famille récupéré
                 BD.Connexion.Open();
                 SqlCommand maRequete = new SqlCommand("prc_medicament_famille", BD.Connexion);
                 maRequete.CommandType = CommandType.StoredProcedure;
 
                 // Ajouter les parameters à la procédure stockée
                 SqlParameter paramFamCode = new SqlParameter("@fam_code", SqlDbType.VarChar, 5);
+                //
                 paramFamCode.Value = codeFam;
 
                 maRequete.Parameters.Add(paramFamCode);
 
                 SqlDataReader allData = maRequete.ExecuteReader();
 
-              
+              //remplissage de la list view
                 while (allData.Read())
                 {
                     ListViewItem ligne = new ListViewItem();

@@ -50,6 +50,8 @@ namespace AP_6_Swiss_Visite
             this.columnHeader10 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -62,7 +64,7 @@ namespace AP_6_Swiss_Visite
             this.columnHeader3});
             this.lvEtapeNormee.FullRowSelect = true;
             this.lvEtapeNormee.HideSelection = false;
-            this.lvEtapeNormee.Location = new System.Drawing.Point(24, 70);
+            this.lvEtapeNormee.Location = new System.Drawing.Point(24, 88);
             this.lvEtapeNormee.MultiSelect = false;
             this.lvEtapeNormee.Name = "lvEtapeNormee";
             this.lvEtapeNormee.Size = new System.Drawing.Size(373, 160);
@@ -88,7 +90,7 @@ namespace AP_6_Swiss_Visite
             // 
             // btModifEtapeNorme
             // 
-            this.btModifEtapeNorme.Location = new System.Drawing.Point(193, 158);
+            this.btModifEtapeNorme.Location = new System.Drawing.Point(117, 158);
             this.btModifEtapeNorme.Name = "btModifEtapeNorme";
             this.btModifEtapeNorme.Size = new System.Drawing.Size(137, 40);
             this.btModifEtapeNorme.TabIndex = 1;
@@ -126,7 +128,7 @@ namespace AP_6_Swiss_Visite
             // 
             this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(35, 377);
+            this.button1.Location = new System.Drawing.Point(24, 394);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(144, 44);
             this.button1.TabIndex = 7;
@@ -153,7 +155,7 @@ namespace AP_6_Swiss_Visite
             this.columnHeader10});
             this.lvhistorique.FullRowSelect = true;
             this.lvhistorique.HideSelection = false;
-            this.lvhistorique.Location = new System.Drawing.Point(24, 260);
+            this.lvhistorique.Location = new System.Drawing.Point(24, 280);
             this.lvhistorique.Name = "lvhistorique";
             this.lvhistorique.Size = new System.Drawing.Size(731, 98);
             this.lvhistorique.TabIndex = 9;
@@ -203,23 +205,44 @@ namespace AP_6_Swiss_Visite
             // 
             // groupBox1
             // 
+            this.groupBox1.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.groupBox1.Controls.Add(this.tbDateNorme);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.tbEtapeNorme);
             this.groupBox1.Controls.Add(this.btModifEtapeNorme);
-            this.groupBox1.Location = new System.Drawing.Point(414, 10);
+            this.groupBox1.Location = new System.Drawing.Point(414, 29);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(364, 219);
             this.groupBox1.TabIndex = 12;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Mofication des étapes normées";
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(21, 68);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(231, 17);
+            this.label3.TabIndex = 13;
+            this.label3.Text = "Sélectionnez une étape à modifier :";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(21, 258);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(193, 17);
+            this.label4.TabIndex = 14;
+            this.label4.Text = "Historique des modifications :";
+            // 
             // frm_EtapeNorme_maj
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.lvhistorique);
@@ -233,6 +256,7 @@ namespace AP_6_Swiss_Visite
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -258,5 +282,7 @@ namespace AP_6_Swiss_Visite
         private System.Windows.Forms.ColumnHeader columnHeader10;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
     }
 }
