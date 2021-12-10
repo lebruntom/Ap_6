@@ -111,6 +111,7 @@ Le projet est constitué de différentes pages :
 * une page de consultation des médicaments par famille
 * une page de mise à jour des étapes normées
 * une page de consultation du workflow des étapes d'un médicament
+* une page permettant la saisie d'une décision d'une étape
 
 <p align="right">(<a href="#top">Retour en haut</a>)</p>
 
