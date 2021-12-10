@@ -81,6 +81,7 @@ Vous aurez aussi besoin du script de la création de la base de données accéss
 
 1. Importez la base de données dans SQL server et executer la en vérifiant que toutes les tables se sont correctement créées.
 
+<img src="https://docs.microsoft.com/fr-fr/sql/ssms/quickstarts/media/ssms-connect-query-sql-server/execute.png?view=sql-server-ver15">
 
 ### Configuration
 
