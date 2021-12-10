@@ -77,6 +77,8 @@ Ensuite, nous aurons besoin de SQL Server
 * Télécharger SQL Server sur [microsoft.com](https://www.microsoft.com/fr-fr/sql-server/sql-server-downloads)
 
 Vous aurez aussi besoin du script de la création de la base de données accéssible dans le projet en format .sql
+
+<p align="right">(<a href="#top">Retour en haut</a>)</p>
 ### Importation
 
 1. Importez la base de données dans SQL server et executer la en vérifiant que toutes les tables se sont correctement créées.
@@ -85,6 +87,7 @@ Commencez par ouvrir le fichier du script de création de base et appuyez sur le
 
 <p align="center"><img src="https://docs.microsoft.com/fr-fr/sql/ssms/quickstarts/media/ssms-connect-query-sql-server/execute.png?view=sql-server-ver15" style="width:450px; height:370px;"></p>
 
+<p align="right">(<a href="#top">Retour en haut</a>)</p>
 ### Configuration
 
 Une fois le projet lancé dans visual studio et la base de données importée, rendez vous dans la class BD du projet.
@@ -95,7 +98,7 @@ Modifiez les informations de connexion à la base de données en changeant le no
 private static string Connexionstring = @"Data Source=BTS2020-20\SQLEXPRESS;Initial Catalog=DB_gesAMM;Integrated Security=True";
 public static SqlConnection Connexion = new SqlConnection(Connexionstring);
 ```
-
+<p align="right">(<a href="#top">Retour en haut</a>)</p>
 <!-- Utilisation -->
 ## Utilisation
 
