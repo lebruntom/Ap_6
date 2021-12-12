@@ -23,6 +23,8 @@ namespace AP_6_Swiss_Visite
         {
             getFamilles();
             getMedicaments();
+            getEtapes();
+            getDecision();
         }
 
         private void ajoutToolStripMenuItem_Click(object sender, EventArgs e)
@@ -30,6 +32,13 @@ namespace AP_6_Swiss_Visite
             this.Hide();
             AjoutMedicament ajoutMedicament = new AjoutMedicament();
             ajoutMedicament.Show();
+        }
+
+        private void enCoursDeValidationToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            MedicamentEnCoursDeValidation medicamentEnCours = new MedicamentEnCoursDeValidation();
+            medicamentEnCours.Show();
         }
     }
 }

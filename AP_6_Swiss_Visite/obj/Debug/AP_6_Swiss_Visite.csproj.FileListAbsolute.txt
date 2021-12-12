@@ -20,3 +20,4 @@ C:\Users\ramanzir\Desktop\Ap_6\AP_6_Swiss_Visite\obj\Debug\AP_6_Swiss_Visite.csp
 C:\Users\ramanzir\Desktop\Ap_6\AP_6_Swiss_Visite\obj\Debug\AP_6_Swiss_Visite.csproj.CoreCompileInputs.cache
 C:\Users\ramanzir\Desktop\Ap_6\AP_6_Swiss_Visite\obj\Debug\AP_6_Swiss_Visite.exe
 C:\Users\ramanzir\Desktop\Ap_6\AP_6_Swiss_Visite\obj\Debug\AP_6_Swiss_Visite.pdb
+C:\Workspace\Ap_6\AP_6_Swiss_Visite\obj\Debug\AP_6_Swiss_Visite.MedicamentEnCoursDeValidation.resources

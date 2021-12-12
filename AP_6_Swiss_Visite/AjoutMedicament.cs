@@ -25,6 +25,7 @@ namespace AP_6_Swiss_Visite
 
         private void AjoutMedicament_Load(object sender, EventArgs e)
         {
+            //ajout des codes de famille dans la comboBox
             foreach(Famille uneFamille in Famille.LesFamilles.Values)
             {
                 comboBox1.Items.Add(uneFamille.getCodeFamille());
@@ -50,50 +51,60 @@ namespace AP_6_Swiss_Visite
         private void button1_Click(object sender, EventArgs e)
         {
 
-            float prixUnitaire;
-            try
+            if (tbNomCommercial.Text != "" && tbDepotLegal.Text != "" && tbPrix.Text != "" && rtbComposition.Text != "" && rtbContreIndication.Text != "" && rtbEffets.Text != "")
             {
-                prixUnitaire = float.Parse(tbPrix.Text);
-            }
-            catch
-            {
-                MessageBox.Show("Le prix est incorect");
-                return;
-            }
 
-            if (Medicament.lesMedicaments.ContainsKey(tbDepotLegal.Text.ToString()))
-            {
-                MessageBox.Show("Ce médicament existe déja");
-            }
-            else
-            {
-                bool ajouter = ajouterMedicament(tbDepotLegal.Text.ToString(), tbNomCommercial.Text.ToString(), comboBox1.Text, rtbComposition.Text.ToString(), rtbEffets.Text.ToString(), rtbContreIndication.Text.ToString(), prixUnitaire);
-                
-                //si la requète d'insertion s'est bien effectuée 
-                if (ajouter)
+                //essayer de convertir le prix sinon afficher une erreur 
+                float prixUnitaire;
+                try
                 {
-                    MessageBox.Show("Le médicament a bien été ajouté");
+                    prixUnitaire = float.Parse(tbPrix.Text);//convertir en float le prix
+                }
+                catch
+                {
+                    MessageBox.Show("Le prix est incorect");
+                    return;
+                }
 
-                    getMedicaments();//récupération des medicament pour avoir le nouveau
-
-                    //remise à zero de l'interface
-                    comboBox1.SelectedIndex = 0;
-                    tbDepotLegal.Text = "";
-                    tbNomCommercial.Text = "";
-                    tbPrix.Text = "";
-                    rtbComposition.Text = "";
-                    rtbContreIndication.Text = "";
-                    rtbEffets.Text = "";
+                if (Medicament.lesMedicaments.ContainsKey(tbDepotLegal.Text.ToString()))
+                {
+                    MessageBox.Show("Ce médicament existe déja");
                 }
                 else
                 {
-                    MessageBox.Show("Erreur lors de l'ajout");
+                    bool ajouter = ajouterMedicament(tbDepotLegal.Text.ToString(), tbNomCommercial.Text.ToString(), comboBox1.Text, rtbComposition.Text.ToString(), rtbEffets.Text.ToString(), rtbContreIndication.Text.ToString(), prixUnitaire);
+
+                    //si la requète d'insertion s'est bien effectuée 
+                    if (ajouter)
+                    {
+                        MessageBox.Show("Le médicament a bien été ajouté");
+
+                        getMedicaments();//récupération des medicament pour avoir le nouveau
+
+                        //remise à zero de l'interface
+                        comboBox1.SelectedIndex = 0;
+                        tbDepotLegal.Text = "";
+                        tbNomCommercial.Text = "";
+                        tbPrix.Text = "";
+                        rtbComposition.Text = "";
+                        rtbContreIndication.Text = "";
+                        rtbEffets.Text = "";
+                    }
+                    else
+                    {
+                        MessageBox.Show("Erreur lors de l'ajout");//Message si l'ajout a échoué
+                    }
                 }
-            } 
+            }
+            else
+            {
+                MessageBox.Show("Merci de bien remplir toutes les informations");
+            }
         }
 
         private void btRetour_Click(object sender, EventArgs e)
         {
+            //retour au menu
             this.Hide();
             Form1 form1 = new Form1();
             form1.Show();
