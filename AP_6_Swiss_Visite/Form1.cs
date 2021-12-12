@@ -23,7 +23,8 @@ namespace AP_6_Swiss_Visite
         {
             getFamilles();
             lireMedicament();
-            
+            lireEtapes();
+            lireDecision();
         }
 
         private void ajoutToolStripMenuItem_Click(object sender, EventArgs e)

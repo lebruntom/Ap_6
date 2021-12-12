@@ -16,25 +16,10 @@ namespace AP_6_Swiss_Visite
         {
             InitializeComponent();
         }
-
-        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
+        public void RemplirMedicament()
         {
-            lvWorkflow.Items.Clear();//vider la listview a chaque fois qu'on re selectionne un nouveau médicament
-            if (lvMedicament.SelectedIndices.Count <= 0)//si y a pas d'element selectionné donc inférieur à 0 il se passe rien
-            {
-                return;
-            }
-            int idx = lvMedicament.SelectedIndices[0];//sinon elle va afficher la liste des informations voulu
-            if (idx >= 0)
-            {
-                //liste des informations workflow
-            }
-        }
-
-        private void AjoutWorkflow_Load(object sender, EventArgs e)
-        {
-            lvMedicament.Items.Clear();
-
+            //le dictionnaire fonctionne avec des clés donc on peut appeler une clés dans un dictionnaire, 
+            //une clés qui correspond a une info.les clés donc les informations.
             Dictionary<string, Medicament>.KeyCollection lesCles = Globale.lesMedicaments.Keys;
             foreach (string code in lesCles)//pour parcourrir le dictionnaire
             {
@@ -50,15 +35,82 @@ namespace AP_6_Swiss_Visite
                 laLigne.SubItems.Add(unMedicament.getPrixEchantillon().ToString());
                 laLigne.SubItems.Add(unMedicament.getDerniereEtape().ToString());
 
-                lvMedicament.Items.Add(laLigne);
+                lvMedicament.Items.Add(laLigne);//ajout des éléments dans la listView
             }
+        }
+        public void RemplirWorkflow()
+        {
+            string num = lvMedicament.SelectedItems[0].Text;
+            foreach (Workflow unWorkflow in Globale.lesMedicaments[num].getLesEtapes())
+            {
+                ListViewItem ligne = new ListViewItem();
+                ListViewItem ligneSuivante = new ListViewItem();
+
+                ligne.Text = unWorkflow.getEtapeNum().ToString();
+
+                string norme = "";
+                //pour remplir la listView des Etape et Etape_normée
+                foreach (Etape uneEtape in Globale.lesEtapes)
+                {
+                    //pour passer dans l'heritage
+                    //si le numero d'etape est pareil que le num dans workflow et que le type de l'objet s'appel bien Etape_norme
+                    if (uneEtape.getEtapeNum() == unWorkflow.getEtapeNum() && uneEtape.GetType().Name == "Etape_norme")//pour aller dans l'heritage recup info
+                    {
+
+                        norme = (uneEtape as Etape_norme).getNorme().ToString(); //recuperer la norme dans etape_normée
+                        DateTime dateNorme = (uneEtape as Etape_norme).GetDate();
+                        ligne.SubItems.Add(uneEtape.getEtapeLibelle());
+                        ligne.SubItems.Add(norme);
+                        ligne.SubItems.Add(dateNorme.ToString("dd.MM-yyyy"));//pour ne pas afficher les heures à la fin
+                    }
+                }
+                lvWorkflow.Items.Add(ligne);
+
+                string libelleDecision = "";//il peut être vide mais on le remplit après dans le foreach
+                DateTime dateDecision = DateTime.Now;
+                lvDecision.Items.Clear();
+                //pour remplir la listView des Decisions
+                foreach (Decision uneDecision in Globale.LesDecisions)
+                {
+                    //si l'ID dans Workflow et L'id dans décision sont identiques
+                    if (unWorkflow.getDecisionID() == uneDecision.getID())
+                    {
+                        libelleDecision = uneDecision.getLibelle();
+                        dateDecision = unWorkflow.getDateDecision();
+                    }
+                }
+                ligneSuivante.Text = libelleDecision.ToString();
+                ligneSuivante.SubItems.Add(dateDecision.ToString("dd.MM-yyyy"));
+                lvDecision.Items.Add(ligneSuivante);//ajout dans la listview decision
+            }
+        }
+        private void AjoutWorkflow_Load(object sender, EventArgs e)
+        {
+            lvMedicament.Items.Clear();
+            RemplirMedicament();//ajout des médicaments dans la liste view
+            
+        }
+        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            lvWorkflow.Items.Clear();//vider la listview a chaque fois qu'on re selectionne un nouveau médicament
+            if (lvMedicament.SelectedIndices.Count == 0)//si y a pas d'element selectionné donc inférieur à 0 il se passe rien
+            {
+                return;
+            }
+            RemplirWorkflow();//pour remplir les deux listView permettant d'affichage les étapes et la décision
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
+            //bouton retour de la page
             this.Hide();
             Form1 Menu = new Form1();
             Menu.Show();
+        }
+
+        private void listView1_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+
         }
     }
 }

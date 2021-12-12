@@ -6,18 +6,17 @@ using System.Threading.Tasks;
 
 namespace AP_6_Swiss_Visite
 {
-    internal class Famille
+    public class Famille
     {
-        public static Dictionary<string, Famille> LesFamilles = new Dictionary<string, Famille>();
 
         private string codeFamille;
         private string libelleFamille;
 
-        public Famille(string codeFamille, string libelleFamille)
+        public Famille(string lecodeFamille, string lelibelleFamille)
         {
-            this.codeFamille = codeFamille;
-            this.libelleFamille = libelleFamille;
-            LesFamilles.Add(codeFamille, this);
+            this.codeFamille = lecodeFamille;
+            this.libelleFamille = lelibelleFamille;
+            Globale.LesFamilles.Add(codeFamille, this);
         }
 
         public string getCodeFamille()

@@ -6,21 +6,20 @@ using System.Threading.Tasks;
 
 namespace AP_6_Swiss_Visite
 {
-    class Decision
-    {
-        private int id;
-        private string libelle;
+    public class Decision
+    { 
 
+        public int id;
+        public string libelle;
 
         public Decision(int id, string libelle)
         {
             this.id = id;
             this.libelle = libelle;
+            Globale.LesDecisions.Add(this);
         }
-
-
-
-        public int getId() { return this.id; }
+        public int getID() { return this.id; }
         public string getLibelle() { return this.libelle; }
+
     }
 }

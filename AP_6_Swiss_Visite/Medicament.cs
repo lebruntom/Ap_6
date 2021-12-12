@@ -8,8 +8,7 @@ namespace AP_6_Swiss_Visite
 {
     internal class Medicament
     {
-        public static Dictionary<string, Medicament> lesMedicaments = new Dictionary<string, Medicament>();
-
+        private List<Workflow> lesEtapes = new List<Workflow>();
         private string depotLegalMed;
         private string nomCommercialMed;
         private Famille laFamille;
@@ -19,17 +18,17 @@ namespace AP_6_Swiss_Visite
         private float prixEchantillonMed;
         private int derniereEtape;
 
-        public Medicament(string depotLegalMed, string nomCommercialMed, string laFamille, string compositionMed, string effetMed, string contreIndicationMed, float prixEchantillonMed, int derniereEtape)
+        public Medicament(string ledepotLegalMed, string lenomCommercialMed, string laFamille, string lecompositionMed, string leeffetMed, string lecontreIndicationMed, float leprixEchantillonMed, int lederniereEtape)
         {
-            this.depotLegalMed = depotLegalMed;
-            this.nomCommercialMed = nomCommercialMed;
-            this.laFamille = Famille.LesFamilles[laFamille];
-            this.compositionMed = compositionMed;
-            this.effetMed = effetMed;
-            this.contreIndicationMed = contreIndicationMed;
-            this.prixEchantillonMed = prixEchantillonMed;
-            this.derniereEtape = derniereEtape;
-            lesMedicaments.Add(depotLegalMed, this);
+            this.depotLegalMed = ledepotLegalMed;
+            this.nomCommercialMed = lenomCommercialMed;
+            this.laFamille = Globale.LesFamilles[laFamille];
+            this.compositionMed = lecompositionMed;
+            this.effetMed = leeffetMed;
+            this.contreIndicationMed = lecontreIndicationMed;
+            this.prixEchantillonMed = leprixEchantillonMed;
+            this.derniereEtape = lederniereEtape;
+            Globale.lesMedicaments.Add(depotLegalMed, this);
         }
 
         public string getDepotLegal() { return this.depotLegalMed; }
@@ -37,6 +36,8 @@ namespace AP_6_Swiss_Visite
         public string getNomCommercial() { return this.nomCommercialMed; }
 
         public Famille getlaFamille() { return this.laFamille; }
+
+        public List<Workflow> getLesEtapes() { return this.lesEtapes; }
 
         public string getComposition() { return this.compositionMed; }
 
@@ -47,5 +48,7 @@ namespace AP_6_Swiss_Visite
         public float getPrixEchantillon() { return this.prixEchantillonMed; }
 
         public int getDerniereEtape() { return this.derniereEtape; }
+
+        public void setlesEtapes(List<Workflow> lesEtapes) { this.lesEtapes = lesEtapes;  }
     }
 }
