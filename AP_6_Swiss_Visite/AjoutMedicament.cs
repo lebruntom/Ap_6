@@ -25,6 +25,7 @@ namespace AP_6_Swiss_Visite
 
         private void AjoutMedicament_Load(object sender, EventArgs e)
         {
+            //ajout des codes de famille dans la comboBox
             foreach(Famille uneFamille in Famille.LesFamilles.Values)
             {
                 comboBox1.Items.Add(uneFamille.getCodeFamille());
@@ -52,10 +53,12 @@ namespace AP_6_Swiss_Visite
 
             if (tbNomCommercial.Text != "" && tbDepotLegal.Text != "" && tbPrix.Text != "" && rtbComposition.Text != "" && rtbContreIndication.Text != "" && rtbEffets.Text != "")
             {
+
+                //essayer de convertir le prix sinon afficher une erreur 
                 float prixUnitaire;
                 try
                 {
-                    prixUnitaire = float.Parse(tbPrix.Text);
+                    prixUnitaire = float.Parse(tbPrix.Text);//convertir en float le prix
                 }
                 catch
                 {
@@ -89,7 +92,7 @@ namespace AP_6_Swiss_Visite
                     }
                     else
                     {
-                        MessageBox.Show("Erreur lors de l'ajout");
+                        MessageBox.Show("Erreur lors de l'ajout");//Message si l'ajout a échoué
                     }
                 }
             }
@@ -101,6 +104,7 @@ namespace AP_6_Swiss_Visite
 
         private void btRetour_Click(object sender, EventArgs e)
         {
+            //retour au menu
             this.Hide();
             Form1 form1 = new Form1();
             form1.Show();

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace AP_6_Swiss_Visite
 {
-    internal class Medicament
+    public class Medicament
     {
         public static Dictionary<string, Medicament> lesMedicaments = new Dictionary<string, Medicament>();
 
@@ -18,10 +18,11 @@ namespace AP_6_Swiss_Visite
         private string contreIndicationMed;
         private float prixEchantillonMed;
         private int derniereEtape;
+        private List<Workflow> lesEtapes = new List<Workflow>();
 
-        public Medicament(string depotLegalMed, string nomCommercialMed, string laFamille, string compositionMed, string effetMed, string contreIndicationMed, float prixEchantillonMed, int derniereEtape)
+        public Medicament(string leDepotLegalMed, string nomCommercialMed, string laFamille, string compositionMed, string effetMed, string contreIndicationMed, float prixEchantillonMed, int derniereEtape)
         {
-            this.depotLegalMed = depotLegalMed;
+            this.depotLegalMed = leDepotLegalMed;
             this.nomCommercialMed = nomCommercialMed;
             this.laFamille = Famille.LesFamilles[laFamille];
             this.compositionMed = compositionMed;
@@ -47,5 +48,14 @@ namespace AP_6_Swiss_Visite
         public float getPrixEchantillon() { return this.prixEchantillonMed; }
 
         public int getDerniereEtape() { return this.derniereEtape; }
+
+        public List<Workflow> getLesEtapes()
+        {
+            return this.lesEtapes;
+        }
+        public void setLesEtapes(List<Workflow> lesEtapes)
+        {
+            this.lesEtapes = lesEtapes;
+        }
     }
 }
