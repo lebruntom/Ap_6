@@ -6,19 +6,42 @@ using System.Threading.Tasks;
 
 namespace AP_6_Swiss_Visite
 {
-    class Workflow
+    public class Workflow
     {
-        private DateTime dateDecision;
-        private List<Etape> etape;
-        private List<Decision> decision;
+        public static List<Workflow> lesWorkflow = new List<Workflow>();
 
+        private string depotLegalWorkflow;
+        private int numEtapeWorflow;
+        private int idDecisionWorkflow;
+        private DateTime dateDecisionWorkflow;
 
-
-        public void workflow(DateTime dateDecision, List<Etape> etape, List<Decision> decision)
+        //Constructeur
+        public Workflow(string leDepotLegalWorkflow, int leNumEtapeWorkflow, int leIdDecisionWorkflow, DateTime laDateDecisionWorkflow)
         {
-            this.dateDecision = dateDecision;
-            this.etape = etape;
-            this.decision = decision;
+            this.depotLegalWorkflow = leDepotLegalWorkflow;
+            this.numEtapeWorflow = leNumEtapeWorkflow;
+            this.idDecisionWorkflow = leIdDecisionWorkflow;
+            this.dateDecisionWorkflow = laDateDecisionWorkflow;
         }
+
+
+        public string getDepotLegalWorkflow()
+        {
+            return this.depotLegalWorkflow;
+        }
+        public int getNumEtapeWorkflow()
+        {
+            return this.numEtapeWorflow;
+        }
+        public int getIdDecisionWorkflow()
+        {
+            return this.idDecisionWorkflow;
+        }
+        public DateTime getDateDecisionWorkflow()
+        {
+            return this.dateDecisionWorkflow;
+        }
+
+
     }
 }

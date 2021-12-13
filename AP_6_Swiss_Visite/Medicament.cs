@@ -1,46 +1,60 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace AP_6_Swiss_Visite
 {
-    class Medicament
+    public class Medicament
     {
-        private string depotLegal;
-        private string nomCommercial;
-        private string composition;
-        private string effets;
-        private string contreIndications;
-        private string amm;
+        public static Dictionary<string, Medicament> lesMedicaments = new Dictionary<string, Medicament>();
+
+        private string depotLegalMed;
+        private string nomCommercialMed;
+        private Famille laFamille;
+        private string compositionMed;
+        private string effetMed;
+        private string contreIndicationMed;
+        private float prixEchantillonMed;
         private int derniereEtape;
-        private List<Famille> famille;
-        //famille
+        private List<Workflow> lesEtapes = new List<Workflow>();
 
-
-
-        public Medicament(string depotLegal, string nomCommercial, string composition, string effets, string contreIndications, string amm, int derniereEtape, List<Famille> famille)
+        public Medicament(string leDepotLegalMed, string nomCommercialMed, string laFamille, string compositionMed, string effetMed, string contreIndicationMed, float prixEchantillonMed, int derniereEtape)
         {
-            this.depotLegal = depotLegal;
-            this.nomCommercial = nomCommercial;
-            this.composition = composition;
-            this.effets = effets;
-            this.contreIndications = contreIndications;
-            this.amm = amm;
+            this.depotLegalMed = leDepotLegalMed;
+            this.nomCommercialMed = nomCommercialMed;
+            laFamille = laFamille.Trim();
+            this.laFamille = Famille.LesFamilles[laFamille];
+            this.compositionMed = compositionMed;
+            this.effetMed = effetMed;
+            this.contreIndicationMed = contreIndicationMed;
+            this.prixEchantillonMed = prixEchantillonMed;
             this.derniereEtape = derniereEtape;
-            this.famille = famille;
+            lesMedicaments.Add(depotLegalMed, this);
         }
 
+        public string getDepotLegal() { return this.depotLegalMed; }
 
+        public string getNomCommercial() { return this.nomCommercialMed; }
 
-        public string getDepotLegal() { return this.depotLegal; }
-        public string getNomCommercial() { return this.nomCommercial; }
-        public string getComposition() { return this.composition; }
-        public string getEffets() { return this.effets; }
-        public string getContreIndications() { return this.contreIndications; }
-        public string getAmm() { return this.amm; }
+        public Famille getlaFamille() { return this.laFamille; }
+
+        public string getComposition() { return this.compositionMed; }
+
+        public string getEffet() { return this.effetMed; }
+
+        public string getContreIndication() { return this.contreIndicationMed; }
+
+        public float getPrixEchantillon() { return this.prixEchantillonMed; }
+
         public int getDerniereEtape() { return this.derniereEtape; }
-        public List<Famille> getFamille() { return this.famille; }
+
+        public List<Workflow> getLesEtapes()
+        {
+            return this.lesEtapes;
+        }
+        public void setLesEtapes(List<Workflow> lesEtapes)
+        {
+            this.lesEtapes = lesEtapes;
+        }
     }
 }
