@@ -25,10 +25,11 @@
       <ul>
         <li><a href="#Prerequis">Les Prérequis</a></li>
         <li><a href="#Importation">Importation du projet</a></li>
-        <li><a href="#Configuration">Configuration</a></li>
+        <li><a href="##Configuration">Configuration</a></li>
       </ul>
     </li>
     <li><a href="#Utilisation">Utilisation</a></li>
+	<li><a href="#déploiement">Utilisation</a></li>
     <li><a href="#contact">Contact</a></li>
   </ol>
 </details>
