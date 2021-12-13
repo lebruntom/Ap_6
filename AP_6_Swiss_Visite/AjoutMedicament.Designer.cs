@@ -29,6 +29,7 @@ namespace AP_6_Swiss_Visite
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AjoutMedicament));
             this.btRetour = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.tbPrix = new System.Windows.Forms.TextBox();
@@ -45,13 +46,17 @@ namespace AP_6_Swiss_Visite
             this.label1 = new System.Windows.Forms.Label();
             this.rtbComposition = new System.Windows.Forms.RichTextBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // btRetour
             // 
+            this.btRetour.Image = ((System.Drawing.Image)(resources.GetObject("btRetour.Image")));
+            this.btRetour.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btRetour.Location = new System.Drawing.Point(679, 441);
             this.btRetour.Name = "btRetour";
-            this.btRetour.Size = new System.Drawing.Size(105, 57);
+            this.btRetour.Size = new System.Drawing.Size(146, 57);
             this.btRetour.TabIndex = 35;
             this.btRetour.Text = "Retour";
             this.btRetour.UseVisualStyleBackColor = true;
@@ -75,9 +80,11 @@ namespace AP_6_Swiss_Visite
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(228, 441);
+            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button1.Location = new System.Drawing.Point(279, 441);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(360, 58);
+            this.button1.Size = new System.Drawing.Size(269, 57);
             this.button1.TabIndex = 32;
             this.button1.Text = "Ajouter le medicament";
             this.button1.UseVisualStyleBackColor = true;
@@ -184,11 +191,22 @@ namespace AP_6_Swiss_Visite
             this.comboBox1.Size = new System.Drawing.Size(77, 24);
             this.comboBox1.TabIndex = 20;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(26, 416);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(167, 107);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 36;
+            this.pictureBox1.TabStop = false;
+            // 
             // AjoutMedicament
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(936, 544);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btRetour);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.tbPrix);
@@ -206,8 +224,10 @@ namespace AP_6_Swiss_Visite
             this.Controls.Add(this.rtbComposition);
             this.Controls.Add(this.comboBox1);
             this.Name = "AjoutMedicament";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AjoutMedicament";
             this.Load += new System.EventHandler(this.AjoutMedicament_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -231,5 +251,6 @@ namespace AP_6_Swiss_Visite
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.RichTextBox rtbComposition;
         private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

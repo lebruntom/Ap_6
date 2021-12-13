@@ -50,13 +50,12 @@ namespace AP_6_Swiss_Visite
 
                 string norme = "";
                 //pour remplir la listView des Etape et Etape_normée
-                foreach (Etape uneEtape in Globale.lesEtapes)
+                foreach (Etape uneEtape in Etape.lesEtapes)
                 {
                     //pour passer dans l'heritage
                     //si le numero d'etape est pareil que le num dans workflow et que le type de l'objet s'appel bien Etape_norme
                     if (uneEtape.getNum() == unWorkflow.getNumEtapeWorkflow() && uneEtape.GetType().Name == "Etape_norme")//pour aller dans l'heritage recup info
                     {
-
                         norme = (uneEtape as EtapeNormee).getNorme().ToString(); //recuperer la norme dans etape_normée
                         DateTime dateNorme = (uneEtape as EtapeNormee).getDateNorme();
                         ligne.SubItems.Add(uneEtape.getLibelle());

@@ -30,7 +30,7 @@ namespace AP_6_Swiss_Visite
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (tbNomCommercial.Text != "" && tbDepotLegal.Text != "" && tbPrix.Text != "" && rtbComposition.Text != "" && rtbContreIndication.Text != "" && rtbEffets.Text != "")
+            if (tbNomCommercial.Text != string.Empty && tbDepotLegal.Text != string.Empty && tbPrix.Text != string.Empty && rtbComposition.Text != string.Empty && rtbContreIndication.Text != string.Empty && rtbEffets.Text != string.Empty)
             {
 
                 //essayer de convertir le prix sinon afficher une erreur 
@@ -62,12 +62,12 @@ namespace AP_6_Swiss_Visite
 
                         //remise à zero de l'interface
                         comboBox1.SelectedIndex = 0;
-                        tbDepotLegal.Text = "";
-                        tbNomCommercial.Text = "";
-                        tbPrix.Text = "";
-                        rtbComposition.Text = "";
-                        rtbContreIndication.Text = "";
-                        rtbEffets.Text = "";
+                        tbDepotLegal.Text = string.Empty;
+                        tbNomCommercial.Text = string.Empty;
+                        tbPrix.Text = string.Empty;
+                        rtbComposition.Text = string.Empty;
+                        rtbContreIndication.Text = string.Empty;
+                        rtbEffets.Text = string.Empty;
                     }
                     else
                     {

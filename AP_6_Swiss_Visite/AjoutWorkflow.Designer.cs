@@ -29,6 +29,7 @@ namespace AP_6_Swiss_Visite
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AjoutWorkflow));
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -207,6 +208,8 @@ namespace AP_6_Swiss_Visite
             // 
             // button1
             // 
+            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button1.Location = new System.Drawing.Point(1089, 715);
             this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
@@ -240,6 +243,7 @@ namespace AP_6_Swiss_Visite
             this.Controls.Add(this.lvMedicament);
             this.Controls.Add(this.button1);
             this.Name = "AjoutWorkflow";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AjoutWorkflow";
             this.Load += new System.EventHandler(this.AjoutWorkflow_Load);
             this.ResumeLayout(false);

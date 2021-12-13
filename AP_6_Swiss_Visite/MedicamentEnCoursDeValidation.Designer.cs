@@ -29,6 +29,7 @@ namespace AP_6_Swiss_Visite
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MedicamentEnCoursDeValidation));
             this.btRetour = new System.Windows.Forms.Button();
             this.lvDecision = new System.Windows.Forms.ListView();
             this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -41,13 +42,17 @@ namespace AP_6_Swiss_Visite
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // btRetour
             // 
-            this.btRetour.Location = new System.Drawing.Point(1396, 429);
+            this.btRetour.Image = ((System.Drawing.Image)(resources.GetObject("btRetour.Image")));
+            this.btRetour.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btRetour.Location = new System.Drawing.Point(1293, 469);
             this.btRetour.Name = "btRetour";
-            this.btRetour.Size = new System.Drawing.Size(346, 88);
+            this.btRetour.Size = new System.Drawing.Size(236, 76);
             this.btRetour.TabIndex = 7;
             this.btRetour.Text = "Retour";
             this.btRetour.UseVisualStyleBackColor = true;
@@ -59,7 +64,7 @@ namespace AP_6_Swiss_Visite
             this.columnHeader6,
             this.columnHeader8});
             this.lvDecision.HideSelection = false;
-            this.lvDecision.Location = new System.Drawing.Point(1396, 33);
+            this.lvDecision.Location = new System.Drawing.Point(1180, 33);
             this.lvDecision.Name = "lvDecision";
             this.lvDecision.Size = new System.Drawing.Size(349, 305);
             this.lvDecision.TabIndex = 6;
@@ -84,7 +89,7 @@ namespace AP_6_Swiss_Visite
             this.columnHeader5,
             this.columnHeader7});
             this.lvEtape.HideSelection = false;
-            this.lvEtape.Location = new System.Drawing.Point(997, 33);
+            this.lvEtape.Location = new System.Drawing.Point(782, 33);
             this.lvEtape.Name = "lvEtape";
             this.lvEtape.Size = new System.Drawing.Size(402, 305);
             this.lvEtape.TabIndex = 5;
@@ -116,7 +121,7 @@ namespace AP_6_Swiss_Visite
             this.lvMedicament.HideSelection = false;
             this.lvMedicament.Location = new System.Drawing.Point(12, 33);
             this.lvMedicament.Name = "lvMedicament";
-            this.lvMedicament.Size = new System.Drawing.Size(887, 484);
+            this.lvMedicament.Size = new System.Drawing.Size(674, 484);
             this.lvMedicament.TabIndex = 4;
             this.lvMedicament.UseCompatibleStateImageBehavior = false;
             this.lvMedicament.View = System.Windows.Forms.View.Details;
@@ -137,18 +142,31 @@ namespace AP_6_Swiss_Visite
             this.columnHeader3.Text = "Famille";
             this.columnHeader3.Width = 330;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(832, 375);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(300, 170);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 13;
+            this.pictureBox1.TabStop = false;
+            // 
             // MedicamentEnCoursDeValidation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1757, 564);
+            this.ClientSize = new System.Drawing.Size(1924, 594);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btRetour);
             this.Controls.Add(this.lvDecision);
             this.Controls.Add(this.lvEtape);
             this.Controls.Add(this.lvMedicament);
             this.Name = "MedicamentEnCoursDeValidation";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MedicamentEnCoursDeValidation";
             this.Load += new System.EventHandler(this.MedicamentEnCoursDeValidation_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -167,5 +185,6 @@ namespace AP_6_Swiss_Visite
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.ColumnHeader columnHeader3;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

@@ -72,5 +72,10 @@ namespace AP_6_Swiss_Visite
             AjoutWorkflow ajoutWorkflow = new AjoutWorkflow();
             ajoutWorkflow.Show();
         }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

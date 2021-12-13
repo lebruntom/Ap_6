@@ -113,7 +113,7 @@ namespace AP_6_Swiss_Visite
         {
             
 
-            if (tbEtapeNorme.Text != string.Empty && tbEtapeNorme.Text != string.Empty)
+            if (tbEtapeNorme.Text != "" && tbEtapeNorme.Text != "")
             {
 
                 if (lvEtapeNormee.SelectedIndices.Count <= 0)
