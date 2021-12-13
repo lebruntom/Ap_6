@@ -29,7 +29,7 @@
       </ul>
     </li>
     <li><a href="#Utilisation">Utilisation</a></li>
-	<li><a href="#déploiement">Utilisation</a></li>
+	<li><a href="#Déploiemement">Déploiement</a></li>
     <li><a href="#contact">Contact</a></li>
   </ol>
 </details>
@@ -104,7 +104,7 @@ public static SqlConnection Connexion = new SqlConnection(Connexionstring);
 ```
 <p align="right">(<a href="#top">Retour en haut</a>)</p>
 <!-- Utilisation -->
-## Utilisation
+# Utilisation
 
 Le projet est constitué de différentes pages :
 
