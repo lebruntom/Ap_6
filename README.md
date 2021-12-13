@@ -117,6 +117,33 @@ Le projet est constitué de différentes pages :
 
 <p align="right">(<a href="#top">Retour en haut</a>)</p>
 
+# Déploiemement
+
+# INSTALLATION
+
+### Pour déployer ce logiciel vous devez installer :
+
+--> Visual Studio 2022
+
+--> Microsft SQL Server Management Studio
+
+### Installer la base de données
+
+Créez la base de données GSB_gesAMM puis lancez le script fourni ("Script.sql").
+
+### Déployer l'application pour l'installer sur d'autres postes
+
+1. Démarrez Visual Studio.
+2. Ouvrez le projet
+3. Assurez-vous que Visual Studio utilise la configuration de la version Release. Si nécessaire, modifiez le paramètre de configuration de la génération dans la barre d’outils de Debug en Release
+![alt text](https://docs.microsoft.com/fr-fr/dotnet/core/tutorials/media/publishing-with-visual-studio/visual-studio-toolbar-release.png)
+
+4. Cliquez avec le bouton droit sur le projet (pas la solution) dans l’Explorateur de solutions, puis sélectionnez Publier.
+
+5. Sous l’onglet Publier, sélectionnez Publier.
+
+6. Copiez le dossier de release du logiciel sur les postes et lancez le .exe
+
 
 <!-- CONTACT -->
 ## Contact
