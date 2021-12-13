@@ -81,7 +81,8 @@ Vous aurez aussi besoin du script de la création de la base de données accéss
 <p align="right">(<a href="#top">Retour en haut</a>)</p>
 ## Importation
 
-1. Importez la base de données dans SQL server et executer la en vérifiant que toutes les tables se sont correctement créées.
+1. Importez la base de données nommée AP06.sql que vous pouvez retrouver à la racine des fichiers du projet dans SQLServer.
+2. Executer la en vérifiant que toutes les tables se sont correctement créées.
 
 Commencez par ouvrir le fichier du script de création de base et appuyez sur le bouton executer comme vous pouvez le voir sur la capture d'écran et la base de données sera créée.
 
