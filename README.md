@@ -73,17 +73,20 @@ Dans un premier temps, nous aurons de visual studio pour programmer en c#
 * Télécharger visual studio sur [visualstudio.microsoft.com](https://visualstudio.microsoft.com/fr/downloads/)
 
 
-Ensuite, nous aurons besoin de SQL Server
+Ensuite, nous aurons besoin de SQL Server et de SQL Server Management 
 
 * Télécharger SQL Server sur [microsoft.com](https://www.microsoft.com/fr-fr/sql-server/sql-server-downloads)
+* * Télécharger SQL Server Management ici [microsoft.com](https://aka.ms/ssmsfullsetup)
 
 Vous aurez aussi besoin du script de la création de la base de données accéssible dans le projet en format .sql
 
 <p align="right">(<a href="#top">Retour en haut</a>)</p>
 ## Importation
 
-1. Importez la base de données nommée DB_AP06.sql que vous pouvez retrouver à la racine des fichiers du projet dans SQLServer.
-2. Executer la en vérifiant que toutes les tables se sont correctement créées.
+1.Lancez SQL Server Management
+2. Créez une base de données en l'appelant DB_gesAMM.
+2. Importez la base de données nommée DB_AP06.sql que vous pouvez retrouver à la racine des fichiers du projet.
+3. Executer la en vérifiant que toutes les tables se sont correctement créées.
 
 Commencez par ouvrir le fichier du script de création de base et appuyez sur le bouton executer comme vous pouvez le voir sur la capture d'écran et la base de données sera créée.
 
@@ -104,6 +107,7 @@ public static SqlConnection Connexion = new SqlConnection(Connexionstring);
 ```
 <p align="right">(<a href="#top">Retour en haut</a>)</p>
 <!-- Utilisation -->
+
 # Utilisation
 
 Le projet est constitué de différentes pages :
@@ -125,21 +129,25 @@ Le projet est constitué de différentes pages :
 ### Pour déployer ce logiciel vous devez installer :
 
 --> Visual Studio 2022
+* Télécharger visual studio sur [visualstudio.microsoft.com](https://visualstudio.microsoft.com/fr/downloads/)
 
 --> Microsft SQL Server Management Studio
+* Télécharger SQL Server sur [microsoft.com](https://www.microsoft.com/fr-fr/sql-server/sql-server-downloads)
+* Télécharger SQL Server Management ici [microsoft.com](https://aka.ms/ssmsfullsetup)
+
 
 ### Installer la base de données
 
-Créez la base de données GSB_gesAMM puis lancez le script fourni ("Script.sql").
+Créez la base de données GSB_gesAMM puis lancez le script fourni ("DB_AP06.sql").
 
 ### Déployer l'application pour l'installer sur d'autres postes
 
-1. Démarrez Visual Studio.
-2. Ouvrez le projet
+1. Lancez Visual Studio.
+2. Ouvrez le projet que vous avez préalablement téléchargé.
 3. Assurez-vous que Visual Studio utilise la configuration de la version Release. Si nécessaire, modifiez le paramètre de configuration de la génération dans la barre d’outils de Debug en Release
 ![alt text](https://docs.microsoft.com/fr-fr/dotnet/core/tutorials/media/publishing-with-visual-studio/visual-studio-toolbar-release.png)
 
-4. Cliquez avec le bouton droit sur le projet (pas la solution) dans l’Explorateur de solutions, puis sélectionnez Publier.
+4. Appuyez avec le bouton droit dans l’Explorateur de solutions, puis sélectionnez Publier.
 
 5. Sous l’onglet Publier, sélectionnez Publier.
 
