@@ -7,9 +7,9 @@ using System.Data.SqlClient;
 
 namespace AP_6_Swiss_Visite
 {
-    class Globale
+    public static class Globale
     {
-        public static Dictionary<string, Famille> famille = new Dictionary<string, Famille>();
+        //public static Dictionary<string, Famille> famille = new Dictionary<string, Famille>();
         public static List<Etape> lesEtapes = new List<Etape>();
         public static List<EtapeNormee> lesEtapesNormee = new List<EtapeNormee>();
         

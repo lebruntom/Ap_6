@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace AP_6_Swiss_Visite
 {
-    class EtapeNormee : Etape
+    public class EtapeNormee : Etape
     {
        
         private string Norme;

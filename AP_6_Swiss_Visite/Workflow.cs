@@ -6,18 +6,14 @@ using System.Threading.Tasks;
 
 namespace AP_6_Swiss_Visite
 {
-    class Workflow
+    public class Workflow
     {
         public static List<Workflow> lesWorkflow = new List<Workflow>();
-
-
 
         private string depotLegalWorkflow;
         private int numEtapeWorflow;
         private int idDecisionWorkflow;
         private DateTime dateDecisionWorkflow;
-
-
 
         //Constructeur
         public Workflow(string leDepotLegalWorkflow, int leNumEtapeWorkflow, int leIdDecisionWorkflow, DateTime laDateDecisionWorkflow)
@@ -27,8 +23,6 @@ namespace AP_6_Swiss_Visite
             this.idDecisionWorkflow = leIdDecisionWorkflow;
             this.dateDecisionWorkflow = laDateDecisionWorkflow;
         }
-
-
 
 
         public string getDepotLegalWorkflow()
@@ -47,5 +41,7 @@ namespace AP_6_Swiss_Visite
         {
             return this.dateDecisionWorkflow;
         }
+
+
     }
 }

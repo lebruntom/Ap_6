@@ -25,11 +25,9 @@ namespace AP_6_Swiss_Visite
 
           
             //affichage dans la liste view des familles
-            foreach (string code in Globale.famille.Keys)
+            foreach (Famille laFamille in Famille.LesFamilles.Values)
             {
                 ListViewItem ligne = new ListViewItem();
-
-                Famille laFamille = Globale.famille[code];
 
                 ligne.Text = laFamille.getCodeFamille().ToString();
                 ligne.SubItems.Add(laFamille.getLibelleFamille());

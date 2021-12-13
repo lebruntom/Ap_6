@@ -6,22 +6,28 @@ using System.Threading.Tasks;
 
 namespace AP_6_Swiss_Visite
 {
-    class Decision
+    internal class Decision
     {
-        private int id;
-        private string libelle;
+        public static List<Decision> lesDecisions = new List<Decision>();
 
+        private int idDecision;
+        private string libelleDecision;
 
-
-        public Decision(int id, string libelle)
+        //Constructeur
+        public Decision(int leIdDecision, string leLibelleDecision)
         {
-            this.id = id;
-            this.libelle = libelle;
+            this.idDecision = leIdDecision;
+            this.libelleDecision = leLibelleDecision;
         }
 
+        public int getIdDecision()
+        {
+            return this.idDecision;
+        }
 
-
-        public int getId() { return this.id; }
-        public string getLibelle() { return this.libelle; }
+        public string getLibelleDecision()
+        {
+            return this.libelleDecision;
+        }
     }
 }

@@ -6,16 +6,12 @@ using System.Threading.Tasks;
 
 namespace AP_6_Swiss_Visite
 {
-    internal class Famille
+    public class Famille
     {
         public static Dictionary<string, Famille> LesFamilles = new Dictionary<string, Famille>();
 
-
-
         private string codeFamille;
         private string libelleFamille;
-
-
 
         public Famille(string codeFamille, string libelleFamille)
         {
@@ -24,14 +20,10 @@ namespace AP_6_Swiss_Visite
             LesFamilles.Add(codeFamille, this);
         }
 
-
-
         public string getCodeFamille()
         {
             return this.codeFamille;
         }
-
-
 
         public string getLibelleFamille()
         {

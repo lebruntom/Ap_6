@@ -20,11 +20,15 @@ namespace AP_6_Swiss_Visite
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            lireAllFamiles();
+            getFamilles();
             getMedicaments();
+            lireAllFamiles();
             lireLesEtapesNormees();
-            
-            
+            getMedicaments();
+            getEtapes();
+            getDecision();
+
+
         }
 
         private void miseÀJourToolStripMenuItem_Click(object sender, EventArgs e)
@@ -46,6 +50,27 @@ namespace AP_6_Swiss_Visite
             this.Hide();
             frm_Decision_Etape etape = new frm_Decision_Etape();
             etape.Show();
+        }
+
+        private void ajoutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            AjoutMedicament ajoutMedicament = new AjoutMedicament();
+            ajoutMedicament.Show();
+        }
+
+        private void enCoursDeValidationToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            MedicamentEnCoursDeValidation medicamentEnCours = new MedicamentEnCoursDeValidation();
+            medicamentEnCours.Show();
+        }
+
+        private void afficherToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            AjoutWorkflow ajoutWorkflow = new AjoutWorkflow();
+            ajoutWorkflow.Show();
         }
     }
 }
